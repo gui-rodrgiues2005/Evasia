@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Bi4pfhaNIpeEkyJ3eS+EQPlkkyvoaYgymRDVvsku9XU=",
+  "Source": "HackathonAPI",
+  "BasePath": "_content/HackathonAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
