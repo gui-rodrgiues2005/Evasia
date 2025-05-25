@@ -1,42 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Alunos = () => {
   const [filtro, setFiltro] = useState('Todos');
   const [busca, setBusca] = useState('');
+  const [alunos, setAlunos] = useState([]);
 
-  const alunosMock = [
-    {
-      nome: 'Ana Silva',
-      email: 'ana@gmail.com',
-      curso: 'Administração',
-      ultimoAcesso: '2 dias atrás',
-      participacao: 60,
-      media: 8.5,
-      pendentes: 0,
-      risco: 'Baixo'
-    },
-    {
-      nome: 'Carlos Souza',
-      email: 'carlos@gmail.com',
-      curso: 'Direito',
-      ultimoAcesso: '5 dias atrás',
-      participacao: 35,
-      media: 6.5,
-      pendentes: 3,
-      risco: 'Alto'
-    },
-    {
-      nome: 'Maria Oliveira',
-      email: 'maria@gmail.com',
-      curso: 'Pedagogia',
-      ultimoAcesso: '3 dias atrás',
-      participacao: 50,
-      media: 7.2,
-      pendentes: 1,
-      risco: 'Médio'
-    },
-  ];
+  useEffect(() => {
+    fetch('http://localhost:5164/api/User')
+      .then(response => response.json())
+      .then(data => {
+        const alunosCompletos = data.map(aluno => ({
+          ...aluno,
+          email: `${aluno.name.toLowerCase().replace(/\s+/g, '')}@exemplo.com`,
+          curso: 'Curso Genérico',
+          participacao: Math.floor(Math.random() * 101), 
+          media: (Math.random() * 4 + 6).toFixed(1), 
+          pendentes: Math.floor(Math.random() * 4),
+        }));
+        
+        // Calcular risco com base na participação (exemplo)
+        alunosCompletos.forEach(aluno => {
+          if (aluno.participacao < 40) aluno.risco = 'Alto';
+          else if (aluno.participacao < 70) aluno.risco = 'Médio';
+          else aluno.risco = 'Baixo';
+        });
+
+        setAlunos(alunosCompletos);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar alunos:', error);
+      });
+  }, []);
 
   const riscoCor = {
     'Alto': 'red',
@@ -44,8 +39,8 @@ const Alunos = () => {
     'Baixo': 'green'
   };
 
-  const alunosFiltrados = alunosMock.filter(aluno => {
-    const matchBusca = aluno.nome.toLowerCase().includes(busca.toLowerCase());
+  const alunosFiltrados = alunos.filter(aluno => {
+    const matchBusca = aluno.name.toLowerCase().includes(busca.toLowerCase());
     const matchFiltro = filtro === 'Todos' || aluno.risco === filtro;
     return matchBusca && matchFiltro;
   });
@@ -108,13 +103,13 @@ const Alunos = () => {
         </thead>
         <tbody>
           {alunosFiltrados.map((aluno, index) => (
-            <tr key={index} style={{ borderBottom: '1px solid #ddd' }}>
+            <tr key={aluno.user_id} style={{ borderBottom: '1px solid #ddd' }}>
               <td style={tdStyle}>
-                <strong>{aluno.nome}</strong><br />
+                <strong>{aluno.name}</strong><br />
                 <small>{aluno.email}</small>
               </td>
               <td style={tdStyle}>{aluno.curso}</td>
-              <td style={tdStyle}>{aluno.ultimoAcesso}</td>
+              <td style={tdStyle}>{new Date(aluno.user_lastaccess).toLocaleDateString()}</td>
               <td style={tdStyle}>
                 <div style={{ width: '100px', background: '#eee', borderRadius: '4px' }}>
                   <div style={{
@@ -145,27 +140,20 @@ const Alunos = () => {
                 }}>{aluno.risco}</span>
               </td>
               <td style={tdStyle}>
-                <button style={{
-                  background: '#eee',
-                  border: '1px solid #ccc',
-                  borderRadius: '6px',
-                  padding: '4px 8px',
-                  cursor: 'pointer'
-                }}>
-                  <Link
-                    to={`/alunos/${aluno.id}`}
-                    style={{
-                      textDecoration: 'none',
-                      color: 'black',
-                      cursor: 'pointer', 
-                      padding: '4px 8px',
-                      borderRadius: '6px',
-                      fontWeight: 'bold'
-                    }}
-                  >
-                    Ver
-                  </Link>
-                </button>
+                <Link
+                  to={`/perfil-aluno/${aluno.user_id}`}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'black',
+                    cursor: 'pointer',
+                    padding: '4px 8px',
+                    border: '1px solid #ccc',
+                    borderRadius: '6px',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  Ver
+                </Link>
               </td>
             </tr>
           ))}

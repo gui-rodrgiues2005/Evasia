@@ -89,3 +89,4 @@ C:\Users\guilh\Documents\Evasia\HackathonAPI\obj\Debug\net9.0\refint\HackathonAP
 C:\Users\guilh\Documents\Evasia\HackathonAPI\obj\Debug\net9.0\HackathonAPI.pdb
 C:\Users\guilh\Documents\Evasia\HackathonAPI\obj\Debug\net9.0\HackathonAPI.genruntimeconfig.cache
 C:\Users\guilh\Documents\Evasia\HackathonAPI\obj\Debug\net9.0\ref\HackathonAPI.dll
+C:\Users\guilh\Documents\Evasia\HackathonAPI\obj\Debug\net9.0\HackathonAPI.sourcelink.json
