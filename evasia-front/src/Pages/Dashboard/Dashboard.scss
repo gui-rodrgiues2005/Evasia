@@ -5,6 +5,13 @@ body {
 }
 
 
+.spiner  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .dashboard-section {
   .title-section {
     font-size: 2rem;

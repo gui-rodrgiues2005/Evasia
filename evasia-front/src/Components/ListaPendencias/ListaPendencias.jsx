@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ListaPendencias = ({ pendencias }) => {
   return (
@@ -23,19 +24,19 @@ const ListaPendencias = ({ pendencias }) => {
             <strong>Aluno(a) {aluno.nome}</strong> tem {aluno.qtdPendencias} atividades não entregues
             <div style={{ fontSize: '0.85rem', color: '#888' }}>{aluno.data}</div>
           </div>
-          <a
-            href="#"
+          <Link
+            to={`/perfil-aluno/${aluno.id}`}
             style={{
               textDecoration: 'none',
               color: '#007bff',
               fontSize: '0.9rem',
-              cursor: 'pointer',
             }}
             onMouseOver={e => e.currentTarget.style.color = '#0056b3'}
             onMouseOut={e => e.currentTarget.style.color = '#007bff'}
           >
             Ver detalhes
-          </a>
+          </Link>
+
         </div>
       ))}
     </div>

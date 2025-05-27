@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Spiner from '../../Components/Spiner/Spiner'
 
 const Alunos = () => {
   const [filtro, setFiltro] = useState('Todos');
   const [busca, setBusca] = useState('');
   const [alunos, setAlunos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:5164/api/User')
@@ -14,12 +16,11 @@ const Alunos = () => {
           ...aluno,
           email: `${aluno.name.toLowerCase().replace(/\s+/g, '')}@exemplo.com`,
           curso: 'Curso Genérico',
-          participacao: Math.floor(Math.random() * 101), 
-          media: (Math.random() * 4 + 6).toFixed(1), 
+          participacao: Math.floor(Math.random() * 101),
+          media: (Math.random() * 4 + 6).toFixed(1),
           pendentes: Math.floor(Math.random() * 4),
         }));
-        
-        // Calcular risco com base na participação (exemplo)
+
         alunosCompletos.forEach(aluno => {
           if (aluno.participacao < 40) aluno.risco = 'Alto';
           else if (aluno.participacao < 70) aluno.risco = 'Médio';
@@ -27,9 +28,11 @@ const Alunos = () => {
         });
 
         setAlunos(alunosCompletos);
+        setLoading(false);
       })
       .catch(error => {
         console.error('Erro ao buscar alunos:', error);
+        setLoading(false);
       });
   }, []);
 
@@ -44,6 +47,8 @@ const Alunos = () => {
     const matchFiltro = filtro === 'Todos' || aluno.risco === filtro;
     return matchBusca && matchFiltro;
   });
+
+  if (loading) return <div className='spiner'><Spiner /> Buscando dados....</div>;
 
   return (
     <div style={{ padding: '1rem' }}>

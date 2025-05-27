@@ -1,0 +1,74 @@
+.evolucao-aluno {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+
+  .descricao-grafico {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+
+  .grafico-placeholder {
+    .grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 120px;
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .grid-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .linha-verde {
+        width: 4px;
+        height: 80%;
+        background: #4caf50;
+        margin-bottom: 4px;
+      }
+      .linha-azul {
+        width: 4px;
+        height: 8%;
+        background: #2196f3;
+      }
+      .label {
+        font-size: 10px;
+        margin-top: 4px;
+        color: #333;
+      }
+    }
+  }
+
+  .legenda {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+
+    .nota-media {
+      font-size: 12px;
+      color: #007bff;
+      cursor: default;
+    }
+
+    .participacao {
+      font-size: 12px;
+      color: #4caf50;
+      cursor: default;
+    }
+  }
+}
