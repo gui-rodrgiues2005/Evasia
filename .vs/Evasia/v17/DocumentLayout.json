@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|c:\\users\\usuariopc\\documents\\projects\\hackathon\\hackathonapi\\services\\unifenasapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|solutionrelative:hackathonapi\\services\\unifenasapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|c:\\users\\usuariopc\\documents\\projects\\hackathon\\hackathonapi\\services\\iunifenasapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|solutionrelative:hackathonapi\\services\\iunifenasapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|c:\\users\\usuariopc\\documents\\projects\\hackathon\\hackathonapi\\hackathonapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|solutionrelative:hackathonapi\\hackathonapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|c:\\users\\usuariopc\\documents\\projects\\hackathon\\hackathonapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|solutionrelative:hackathonapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|c:\\users\\usuariopc\\documents\\projects\\hackathon\\hackathonapi\\hackathonapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|solutionrelative:hackathonapi\\hackathonapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|c:\\users\\usuariopc\\documents\\projects\\hackathon\\hackathonapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C5C8EF-9947-4E5B-E21E-CBE1FC49F2B0}|HackathonAPI\\HackathonAPI.csproj|solutionrelative:hackathonapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnifenasApiService.cs",
+              "DocumentMoniker": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Services\\UnifenasApiService.cs",
+              "RelativeDocumentMoniker": "HackathonAPI\\Services\\UnifenasApiService.cs",
+              "ToolTip": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Services\\UnifenasApiService.cs",
+              "RelativeToolTip": "HackathonAPI\\Services\\UnifenasApiService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:52:11.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUnifenasApiService.cs",
+              "DocumentMoniker": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Services\\IUnifenasApiService.cs",
+              "RelativeDocumentMoniker": "HackathonAPI\\Services\\IUnifenasApiService.cs",
+              "ToolTip": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Services\\IUnifenasApiService.cs",
+              "RelativeToolTip": "HackathonAPI\\Services\\IUnifenasApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:51:20.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HackathonAPI",
+              "DocumentMoniker": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\HackathonAPI.csproj",
+              "RelativeDocumentMoniker": "HackathonAPI\\HackathonAPI.csproj",
+              "ToolTip": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\HackathonAPI.csproj",
+              "RelativeToolTip": "HackathonAPI\\HackathonAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-19T19:51:09.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Program.cs",
+              "RelativeDocumentMoniker": "HackathonAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Program.cs",
+              "RelativeToolTip": "HackathonAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:51:00.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HackathonAPI.http",
+              "DocumentMoniker": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\HackathonAPI.http",
+              "RelativeDocumentMoniker": "HackathonAPI\\HackathonAPI.http",
+              "ToolTip": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\HackathonAPI.http",
+              "RelativeToolTip": "HackathonAPI\\HackathonAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-19T19:50:45.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "HackathonAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "HackathonAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T19:50:23.678Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
