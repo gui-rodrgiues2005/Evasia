@@ -15,7 +15,7 @@ const Alunos = () => {
         const alunosCompletos = data.map(aluno => ({
           ...aluno,
           email: `${aluno.name.toLowerCase().replace(/\s+/g, '')}@exemplo.com`,
-          curso: 'Curso Genérico',
+          curso: '',
           participacao: Math.floor(Math.random() * 101),
           media: (Math.random() * 4 + 6).toFixed(1),
           pendentes: Math.floor(Math.random() * 4),

@@ -28,7 +28,7 @@ const Dashboard = () => {
         const pendenciasCalculadas = [];
 
         for (const user of cincoUsuarios) {
-          // Buscar logs por usuário individualmente
+
           const resLogs = await fetch('http://localhost:5164/api/LogsUsuario/logs', {
             method: 'POST',
             headers: {

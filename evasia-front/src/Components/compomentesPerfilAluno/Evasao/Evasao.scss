@@ -1,0 +1,22 @@
+.evasao-container {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+  &.baixo {
+    background-color: #e6f4ea;
+    color: #276749;
+  }
+
+  &.medio {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+
+  &.alto {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+}
