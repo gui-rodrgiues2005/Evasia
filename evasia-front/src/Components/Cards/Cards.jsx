@@ -2,23 +2,26 @@ import React from "react";
 import './Cards.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Cards = ({ title, quantidade, icon, porcentagem, informacao }) => {
-    return (
-        <div className="card">
-            <div className="card-header">
-                <FontAwesomeIcon icon={icon} className="icon" />
-                <h2>{title}</h2>
-            </div>
-
-            <div className="card-body">
-                <h1>{quantidade}</h1>
-                <p>
-                    <span className="porcentagem">{porcentagem}</span>
-                    {informacao}
-                </p>
-            </div>
-        </div>
-    );
+const Cards = ({ title, quantidade, icon, porcentagem, informacao, loading }) => {
+  return (
+    <div className='card'>
+      <div className='card-icon'>
+        <FontAwesomeIcon icon={icon} />
+      </div>
+      <div className='card-content'>
+        <h3>{title}</h3>
+        {loading ? (
+          <p className="loading">Carregando...</p>
+        ) : (
+          <>
+            <h2>{quantidade}</h2>
+            <p>{porcentagem} {informacao}</p>
+          </>
+        )}
+      </div>
+    </div>
+  );
 };
+
 
 export default Cards;

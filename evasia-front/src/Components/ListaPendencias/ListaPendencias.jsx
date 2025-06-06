@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ListaPendencias = ({ pendencias }) => {
+  console.log('ListaPendencias', pendencias);
+
   return (
     <div style={{
       backgroundColor: '#fff',

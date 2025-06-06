@@ -1,13 +1,14 @@
 import React from 'react';
 import './Evasao.scss';
 
-const Evasao = ({ userId }) => {
+const Evasao = ({ risco }) => {
   let cor;
-  switch (risco) {
-    case 'alto':
+
+  switch (risco.toLowerCase()) {
+    case 'alto risco':
       cor = 'alto';
       break;
-    case 'medio':
+    case 'médio risco':
       cor = 'medio';
       break;
     default:
@@ -16,7 +17,7 @@ const Evasao = ({ userId }) => {
 
   return (
     <div className={`evasao-container ${cor}`}>
-      <p>⚠️ Risco de evasão: <strong>{risco.charAt(0).toUpperCase() + risco.slice(1)}</strong></p>
+      <p>⚠️ Risco de evasão: <strong>{risco}</strong></p>
     </div>
   );
 };

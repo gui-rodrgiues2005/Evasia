@@ -45,14 +45,14 @@ namespace HackathonAPI.Controllers
                 email = "hackathon@unifenas.br",
                 password = "hackathon#2025"
             };
-            
-            var content = new StringContent(JsonConvert.SerializeObject(credentials), 
+
+            var content = new StringContent(JsonConvert.SerializeObject(credentials),
                 Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync("https://api.unifenas.br/v1/get-token", content);
 
             var token = JsonConvert.DeserializeObject<TokenResponse>(await response.Content.ReadAsStringAsync());
             return token.access_token;
         }
-        
+
     }
 }
