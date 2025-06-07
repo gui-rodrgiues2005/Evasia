@@ -8,38 +8,34 @@ import ListaPendencias from '../../Components/ListaPendencias/ListaPendencias';
 import Spiner from '../../Components/Spiner/Spiner';
 
 const Dashboard = () => {
-  const [logs, setLogs] = useState([]);
-  const [loadingUsuarios, setLoadingUsuarios] = useState(true);
-  const [loadingLogs, setLoadingLogs] = useState(true);
   const [usuarios, setUsuarios] = useState([]);
+  const [logs, setLogs] = useState([]);
+  const [pendencias, setPendencias] = useState([]);
   const [totalAlunos, setTotalAlunos] = useState(0);
   const [alunosEmRisco, setAlunosEmRisco] = useState(0);
   const [totalAcoes, setTotalAcoes] = useState(0);
-  const [pendencias, setPendencias] = useState([]);
   const [mediaNotas, setMediaNotas] = useState(0);
+  const [loadingUsuarios, setLoadingUsuarios] = useState(true);
+  const [loadingLogs, setLoadingLogs] = useState(true);
 
   useEffect(() => {
     const buscarUsuarios = async () => {
       try {
-        const resUsers = await fetch('http://localhost:5164/api/User');
-        const dataUsuarios = await resUsers.json();
+        const res = await fetch('http://localhost:5164/api/User');
+        const data = await res.json();
 
-        setUsuarios(dataUsuarios);
-        setTotalAlunos(dataUsuarios.length);
+        setUsuarios(data);
+        setTotalAlunos(data.length);
+        setTotalAcoes(calcularTaxaEngajamento(data));
 
-        const emRisco = dataUsuarios.filter(user => {
+        const emRisco = data.filter(user => {
           const risco = calcularRisco(user);
           return risco === 'Alto risco' || risco === 'Médio risco';
         }).length;
-
         setAlunosEmRisco(emRisco);
-
-        const taxaEngajamento = calcularTaxaEngajamento(dataUsuarios);
-        setTotalAcoes(taxaEngajamento);
-
-        setLoadingUsuarios(false);
-      } catch (error) {
-        console.error('Erro ao buscar usuários:', error);
+      } catch (err) {
+        console.error('Erro ao buscar usuários:', err);
+      } finally {
         setLoadingUsuarios(false);
       }
     };
@@ -49,54 +45,32 @@ const Dashboard = () => {
 
   useEffect(() => {
     const buscarLogs = async () => {
-      if (usuarios.length === 0) return;
+      if (!usuarios.length) return;
+
+      setLoadingLogs(true);
 
       try {
-        const ids = usuarios.map(user => user.user_id);
+        const alunosValidos = usuarios.filter(u => u.name?.trim().split(/\s+/).length >= 3 && !u.user_id.startsWith('USER_'));
 
-        const resLogs = await fetch('http://localhost:5164/api/LogsUsuario/logs', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(ids)
+        const promessas = alunosValidos.map(async user => {
+          const res = await fetch('http://localhost:5164/api/LogsUsuario/logs', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(user.user_id)
+          });
+          const dados = await res.json();
+          return { userId: user.user_id, logs: dados };
         });
 
-        const logsPorUsuario = await resLogs.json();
+        const logsUsuarios = await Promise.all(promessas);
+        setLogs(logsUsuarios);
+        setAlunosEmRisco(logsUsuarios.filter(l => calcularRisco(usuarios.find(u => u.user_id === l.userId)) !== 'Baixo risco').length);
+        setTotalAcoes(logsUsuarios.reduce((acc, curr) => acc + curr.logs.length, 0));
+        setMediaNotas(calcularMediaTurma(logsUsuarios));
 
-        const hoje = new Date();
-        let riscoCount = 0;
-        let totalAcoesContador = 0;
-
-        for (const user of usuarios) {
-          const logsUsuario = logsPorUsuario.find(logs => logs.userId === user.user_id)?.logs || [];
-
-          // Total de ações
-          totalAcoesContador += logsUsuario.length;
-
-          // Pendências
-          const logsRecentes = logsUsuario.filter(log => {
-            const dataLog = new Date(log.date);
-            const diffDias = (hoje - dataLog) / (1000 * 60 * 60 * 24);
-            return diffDias <= 7;
-          });
-
-          const qtdPendencias = logsRecentes.length < 3 ? 3 - logsRecentes.length : 0;
-          // Risco
-          const risco = calcularRisco(user);
-          if (risco === 'Alto risco' || risco === 'Médio risco') {
-            riscoCount++;
-          }
-        }
-
-        setLogs(logsPorUsuario);
-        setAlunosEmRisco(riscoCount);
-        setTotalAcoes(totalAcoesContador);
-  
-        const media = calcularMediaTurma(logsPorUsuario);
-        setMediaNotas(media);
-
-        setLoadingLogs(false);
-      } catch (error) {
-        console.error('Erro ao buscar logs:', error);
+      } catch (err) {
+        console.error('Erro ao buscar logs:', err);
+      } finally {
         setLoadingLogs(false);
       }
     };
@@ -104,58 +78,43 @@ const Dashboard = () => {
     buscarLogs();
   }, [usuarios]);
 
-  
-
-  function calcularRisco(user) {
-    if (!user || !user.user_lastaccess) return 'Desconhecido';
-
-    const lastAccess = new Date(user.user_lastaccess);
+  const calcularRisco = (user) => {
     const hoje = new Date();
-    const diffDias = (hoje - lastAccess) / (1000 * 60 * 60 * 24);
+    if (!user.user_lastaccess) return 'Desconhecido';
+    const diffDias = (hoje - new Date(user.user_lastaccess)) / (1000 * 60 * 60 * 24);
+    return diffDias > 30 ? 'Alto risco' : diffDias > 7 ? 'Médio risco' : 'Baixo risco';
+  };
 
-    if (diffDias > 30) return 'Alto risco';
-    else if (diffDias > 7) return 'Médio risco';
-    else return 'Baixo risco';
-  }
-
-  function calcularTaxaEngajamento(usuarios) {
+  const calcularTaxaEngajamento = (users) => {
     const hoje = new Date();
-    const usuariosEngajados = usuarios.filter(user => {
+    const ativos = users.filter(user => {
       if (!user.user_lastaccess) return false;
-      const ultimoAcesso = new Date(user.user_lastaccess);
-      const diffDias = (hoje - ultimoAcesso) / (1000 * 60 * 60 * 24);
-      return diffDias <= 7;
+      return (hoje - new Date(user.user_lastaccess)) / (1000 * 60 * 60 * 24) <= 7;
     });
+    return Math.round((ativos.length / users.length) * 100);
+  };
 
-    const taxa = (usuariosEngajados.length / usuarios.length) * 100;
-    return Math.round(taxa);
-  }
-
-  function calcularNotaAluno(logsUsuario) {
+  const calcularNotaAluno = (logsUsuario) => {
     const hoje = new Date();
-    // filtra só ações "graded"
-    const logsDeNota = logsUsuario.filter(l => l.action === 'graded');
+    const pesos = { graded: 10, submitted: 7, viewed: 2, completed: 8, attempted: 5 };
 
-    if (logsDeNota.length === 0) return 0;
+    const notaTotal = logsUsuario.reduce((acc, log) => {
+      const peso = pesos[log.action] || 0;
+      if (!peso) return acc;
 
-    // último graded
-    const ultimaNota = new Date(
-      logsDeNota.sort((a, b) => new Date(b.date) - new Date(a.date))[0].date
-    );
-    const diffDias = (hoje - ultimaNota) / (1000 * 60 * 60 * 24);
+      const dias = (hoje - new Date(log.date)) / (1000 * 60 * 60 * 24);
+      const fator = dias <= 30 ? 1 : dias <= 60 ? 0.7 : dias <= 90 ? 0.5 : 0.2;
+      return acc + peso * fator;
+    }, 0);
 
-    if (diffDias <= 30) return 10;
-    if (diffDias <= 60) return 7;
-    if (diffDias <= 90) return 5;
-    return 0;
-  }
+    const max = 10 * logsUsuario.length;
+    return Math.min(10, Math.max(0, (notaTotal / max) * 10));
+  };
 
-  function calcularMediaTurma(logsPorUsuario) {
-    const notas = logsPorUsuario.map(u => calcularNotaAluno(u.logs));
-    if (notas.length === 0) return 0;
-    const soma = notas.reduce((acc, n) => acc + n, 0);
-    return (soma / notas.length).toFixed(1);
-  }
+  const calcularMediaTurma = (logsUsuarios) => {
+    const notas = logsUsuarios.map(u => calcularNotaAluno(u.logs));
+    return (notas.reduce((acc, n) => acc + n, 0) / notas.length).toFixed(1);
+  };
 
   if (loadingUsuarios) return <div className='spiner'><Spiner /> Buscando usuários...</div>;
 
@@ -164,38 +123,10 @@ const Dashboard = () => {
       <h2 className='title-section'>Dashboard</h2>
 
       <div className='Cards'>
-        <Cards
-          title="Total de Alunos"
-          quantidade={totalAlunos}
-          icon={faUserGraduate}
-          porcentagem="+12%"
-          informacao=" do semestre anterior"
-        />
-        <Cards
-          title="Alunos em risco"
-          quantidade={alunosEmRisco}
-          icon={faExclamationTriangle}
-          porcentagem="14%"
-          informacao=" dos alunos ativos"
-          loading={loadingLogs}
-        />
-
-        <Cards
-          title="Taxa de Engajamento"
-          quantidade={`${totalAcoes}%`}
-          icon={faChartLine}
-          porcentagem="+4%"
-          informacao=" usuários ativos nos últimos 7 dias"
-        />
-
-        <Cards
-          title="Média de Notas"
-          quantidade={mediaNotas}
-          icon={faStar}
-          porcentagem="+3%"
-          informacao=" no semestre atual"
-          loading={loadingLogs}
-        />
+        <Cards title="Total de Alunos" quantidade={totalAlunos} icon={faUserGraduate} porcentagem="+12%" informacao=" do semestre anterior" />
+        <Cards title="Alunos em risco" quantidade={alunosEmRisco} icon={faExclamationTriangle} porcentagem="14%" informacao=" dos alunos ativos" loading={loadingLogs} />
+        <Cards title="Taxa de Engajamento" quantidade={`${totalAcoes}%`} icon={faChartLine} porcentagem="+4%" informacao=" usuários ativos nos últimos 7 dias" />
+        <Cards title="Média de Notas" quantidade={mediaNotas} icon={faStar} porcentagem="+3%" informacao=" no semestre atual" loading={loadingLogs} />
       </div>
 
       <div className='graficos'>
@@ -203,11 +134,7 @@ const Dashboard = () => {
         <GraficoBarras />
       </div>
 
-      {loadingLogs ? (
-        <div className='spiner'><Spiner /> Analisando logs dos alunos...</div>
-      ) : (
-        <ListaPendencias className="listaPendecias" pendencias={pendencias} />
-      )}
+      {loadingLogs ? <div className='spiner'><Spiner /> Analisando logs dos alunos...</div> : <ListaPendencias className="listaPendecias" pendencias={pendencias} />}
     </div>
   );
 };
