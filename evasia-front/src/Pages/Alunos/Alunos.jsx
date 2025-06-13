@@ -122,7 +122,7 @@ const Alunos = () => {
                         body: JSON.stringify(user.user_id)
                     });
                     const dados = await res.json();
-                    return { userId: user.user_id, logs: dados };
+                    return {userId: user.user_id, logs: dados};
                 });
 
                 const logsUsuarios = await Promise.all(promessas);
@@ -133,26 +133,48 @@ const Alunos = () => {
                 const novosAlunos = alunosValidos.map(aluno => {
                     const logs = logsUsuarios.find(l => l.userId === aluno.user_id)?.logs ?? [];
                     const interacoes = filtrarInteracoesValidas(logs);
-                    const participacao = calcularParticipacao(interacoes);
-                    const nota = calcularNotaAluno(logs);
+                    const participacao = calcularParticipacao(interacoes); // valor em %
+                    // Supondo que calcularNotaAluno já retorna alguma nota, mas se quiser usar outra lógica, vamos ignorar essa função
+
+                    // Vamos criar uma nota baseada na combinação dos fatores:
+                    // Normalizar valores para uma escala 0-100 para somar proporcionalmente
+                    const totalLogsNorm = Math.min(logs.length, 100); // limite 100 pra não explodir valor
+                    const interacoesNorm = Math.min(interacoes.length * 10, 100); // multiplica pra dar peso maior, depois limita
+                    const participacaoNorm = participacao; // já é %
+
+                    // Pesos
+                    const pesoLogs = 1;
+                    const pesoInteracoes = 2;
+                    const pesoParticipacao = 3;
+                    const somaPesos = pesoLogs + pesoInteracoes + pesoParticipacao;
+
+                    // Cálculo ponderado
+                    const nota = (
+                        (totalLogsNorm * pesoLogs) +
+                        (interacoesNorm * pesoInteracoes) +
+                        (participacaoNorm * pesoParticipacao)
+                    ) / somaPesos;
 
                     somaNotas += nota;
 
-                    // LOG INDIVIDUAL
                     console.log(`\n[Aluno: ${aluno.name}]`);
                     console.log(`→ Total de logs: ${logs.length}`);
                     console.log(`→ Interações válidas: ${interacoes.length}`);
                     console.log(`→ Participação: ${participacao}%`);
-                    console.log(`→ Nota média: ${nota.toFixed(1)}\n`);
+                    console.log(`→ Nota calculada: ${nota.toFixed(1)}\n`);
 
                     return {
                         ...aluno,
                         participacao,
-                        media: nota.toFixed,
-                        pendentes: 3, // valor fixo por enquanto
+                        media: nota.toFixed(1),
+                        pendentes: 3,
                         ultimosAcessos: interacoes.map(i => i.date),
                     };
                 });
+
+                const mediaGeral = (somaNotas / alunosValidos.length).toFixed(1);
+                console.log(`Média geral dos alunos: ${mediaGeral}`);
+
 
                 setAlunos(novosAlunos);
                 setAlunosValidos(novosAlunos);
@@ -172,7 +194,6 @@ const Alunos = () => {
 
         buscarLogs();
     }, [alunosValidos]);
-
 
 
     const riscoCor = {
