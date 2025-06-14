@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {Link, useNavigate} from 'react-router-dom';
-import Spiner from '../../Components/Spiner/Spiner'
+import {Link} from 'react-router-dom';
+import Spiner from '../../Components/Spiner/Spiner';
 
 const Alunos = () => {
     const [filtro, setFiltro] = useState('Todos');
@@ -15,7 +15,6 @@ const Alunos = () => {
     const [alunosEmRisco, setAlunosEmRisco] = useState(0);
     const [mediaNotas, setMediaNotas] = useState(0);
     const [totalAcoes, setTotalAcoes] = useState(0);
-
 
     const [alunosPorRisco, setAlunosPorRisco] = useState({
         alto: 0,
@@ -37,11 +36,49 @@ const Alunos = () => {
         return diffDias > 30 ? 'Alto risco' : diffDias > 7 ? 'Médio risco' : 'Baixo risco';
     };
 
+    function calcularAtividadesPendentes(modulosTotais, logs) {
+        let pendentes = 0;
+        modulosTotais.forEach(modulo => {
+            const foiFeito = logs.some(log =>
+                log.target === 'course_module' &&
+                log.component === modulo.component &&
+                log.name === modulo.name &&
+                log.action === 'viewed'
+            );
+            if (!foiFeito) pendentes++;
+        });
+        return pendentes;
+    }
+
+    function extrairModulosDeMaiorParticipante(logsUsuarios) {
+        let maior = null;
+        for (let userLogs of logsUsuarios) {
+            if (!maior || userLogs.logs.length > maior.logs.length) {
+                maior = userLogs;
+            }
+        }
+        if (!maior) return [];
+
+        const modulos = maior.logs
+            .filter(log => log.target === 'course_module' && log.action === 'viewed')
+            .map(log => ({
+                name: log.name,
+                component: log.component
+            }));
+
+        const modulosUnicos = modulos.filter((mod, index, self) =>
+                index === self.findIndex(m =>
+                    m.name === mod.name && m.component === mod.component
+                )
+        );
+
+        return modulosUnicos;
+    }
+
     useEffect(() => {
         fetch('http://localhost:5164/api/User')
             .then(response => response.json())
             .then(data => {
-                // 1. Filtrar somente os alunos válidos
                 const alunosFiltrados = data.filter(u => {
                     const nome = u.name?.trim();
                     const partesNome = nome?.split(/\s+/) || [];
@@ -56,7 +93,6 @@ const Alunos = () => {
                     curso: 'Ciência da Computação',
                 }));
 
-                // 2. Calcular risco apenas dos válidos
                 const alunosComRisco = alunosFiltrados.map(user => {
                     const riscoCompleto = calcularRisco(user);
                     const risco = riscoCompleto.includes('Alto') ? 'Alto' :
@@ -69,7 +105,6 @@ const Alunos = () => {
                 setUsuarios(alunosComRisco);
                 setTotalAlunos(alunosComRisco.length);
 
-                // 3. Contar os tipos de risco
                 let riscoAlto = 0, riscoMedio = 0, riscoBaixo = 0;
                 alunosComRisco.forEach(user => {
                     if (user.risco === 'Alto risco') riscoAlto++;
@@ -114,7 +149,6 @@ const Alunos = () => {
 
             setLoadingLogs(true);
             try {
-                // Buscar logs de todos os alunos
                 const promessas = alunosValidos.map(async (user) => {
                     const res = await fetch('http://localhost:5164/api/LogsUsuario/logs', {
                         method: 'POST',
@@ -128,63 +162,53 @@ const Alunos = () => {
                 const logsUsuarios = await Promise.all(promessas);
                 setLogs(logsUsuarios);
 
+                const modulosEsperados = extrairModulosDeMaiorParticipante(logsUsuarios);
                 let somaNotas = 0;
 
                 const novosAlunos = alunosValidos.map(aluno => {
                     const logs = logsUsuarios.find(l => l.userId === aluno.user_id)?.logs ?? [];
                     const interacoes = filtrarInteracoesValidas(logs);
-                    const participacao = calcularParticipacao(interacoes); // valor em %
-                    // Supondo que calcularNotaAluno já retorna alguma nota, mas se quiser usar outra lógica, vamos ignorar essa função
+                    const participacao = calcularParticipacao(interacoes);
 
-                    // Vamos criar uma nota baseada na combinação dos fatores:
-                    // Normalizar valores para uma escala 0-100 para somar proporcionalmente
-                    const totalLogsNorm = Math.min(logs.length, 100); // limite 100 pra não explodir valor
-                    const interacoesNorm = Math.min(interacoes.length * 10, 100); // multiplica pra dar peso maior, depois limita
-                    const participacaoNorm = participacao; // já é %
+                    const totalLogsNorm = Math.min(logs.length, 100);
+                    const interacoesNorm = Math.min(interacoes.length * 10, 100);
+                    const participacaoNorm = participacao;
 
-                    // Pesos
                     const pesoLogs = 1;
                     const pesoInteracoes = 2;
                     const pesoParticipacao = 3;
                     const somaPesos = pesoLogs + pesoInteracoes + pesoParticipacao;
 
-                    // Cálculo ponderado
                     const nota = (
                         (totalLogsNorm * pesoLogs) +
                         (interacoesNorm * pesoInteracoes) +
                         (participacaoNorm * pesoParticipacao)
                     ) / somaPesos;
 
+                    const pendentes = calcularAtividadesPendentes(modulosEsperados, logs);
+
                     somaNotas += nota;
 
-                    console.log(`\n[Aluno: ${aluno.name}]`);
-                    console.log(`→ Total de logs: ${logs.length}`);
-                    console.log(`→ Interações válidas: ${interacoes.length}`);
-                    console.log(`→ Participação: ${participacao}%`);
-                    console.log(`→ Nota calculada: ${nota.toFixed(1)}\n`);
+                    const riscoCompleto = calcularRisco(aluno);
+                    const risco = riscoCompleto.includes('Alto') ? 'Alto' :
+                        riscoCompleto.includes('Médio') ? 'Médio' :
+                            riscoCompleto.includes('Baixo') ? 'Baixo' : 'Desconhecido';
 
                     return {
                         ...aluno,
                         participacao,
                         media: nota.toFixed(1),
-                        pendentes: 3,
+                        pendentes,
                         ultimosAcessos: interacoes.map(i => i.date),
+                        risco
                     };
                 });
 
                 const mediaGeral = (somaNotas / alunosValidos.length).toFixed(1);
-                console.log(`Média geral dos alunos: ${mediaGeral}`);
-
-
                 setAlunos(novosAlunos);
                 setAlunosValidos(novosAlunos);
-
-                const totalAcoes = logsUsuarios.reduce((acc, curr) => acc + curr.logs.length, 0);
-                setTotalAcoes(totalAcoes);
-
-                const mediaNotas = (somaNotas / logsUsuarios.length).toFixed(1);
-                setMediaNotas(mediaNotas);
-
+                setTotalAcoes(logsUsuarios.reduce((acc, curr) => acc + curr.logs.length, 0));
+                setMediaNotas(mediaGeral);
             } catch (err) {
                 console.error('Erro ao buscar logs:', err);
             } finally {
@@ -195,19 +219,10 @@ const Alunos = () => {
         buscarLogs();
     }, [alunosValidos]);
 
-
     const riscoCor = {
         'Alto': 'red',
         'Médio': '#f5a623',
         'Baixo': 'green'
-    };
-
-    const calcularNotaAluno = (logs) => {
-        const logsComNota = logs.filter(l => l.grade !== null && l.grade !== undefined);
-        if (logsComNota.length === 0) return 0;
-
-        const soma = logsComNota.reduce((acc, curr) => acc + parseFloat(curr.grade), 0);
-        return soma / logsComNota.length;
     };
 
     const alunosFiltrados = alunosValidos.filter(aluno => {
@@ -216,12 +231,12 @@ const Alunos = () => {
         return matchBusca && matchFiltro;
     });
 
-    if (loading) return <div className='spiner'><Spiner/> Buscando dados....</div>
+    if (loading) return <div className='spiner'><Spiner/> Buscando dados....</div>;
+
     return (
         <div style={{padding: '1rem'}}>
             <h2 style={{marginBottom: '1rem'}}>Alunos</h2>
 
-            {/* Campo de busca */}
             <input
                 type="text"
                 placeholder="Buscar alunos..."
@@ -236,7 +251,6 @@ const Alunos = () => {
                 }}
             />
 
-            {/* Filtros */}
             <div style={{marginBottom: '1rem'}}>
                 {['Todos', 'Alto', 'Médio', 'Baixo'].map(item => (
                     <button
@@ -259,7 +273,6 @@ const Alunos = () => {
                 ))}
             </div>
 
-            {/* Tabela */}
             <table style={{width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem'}}>
                 <thead>
                 <tr style={{background: '#f9f9f9'}}>
@@ -274,7 +287,7 @@ const Alunos = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {alunosFiltrados.map((aluno, index) => (
+                {alunosFiltrados.map((aluno) => (
                     <tr key={aluno.user_id} style={{borderBottom: '1px solid #ddd'}}>
                         <td style={tdStyle}>
                             <strong>{aluno.name}</strong><br/>
@@ -295,21 +308,21 @@ const Alunos = () => {
                         </td>
                         <td style={tdStyle}>{aluno.media}</td>
                         <td style={{...tdStyle, textAlign: 'center'}}>
-                <span style={{
-                    background: '#e0f7e0',
-                    padding: '2px 8px',
-                    borderRadius: '8px',
-                    fontSize: '0.8rem'
-                }}>{aluno.pendentes}</span>
+                                <span style={{
+                                    background: '#e0f7e0',
+                                    padding: '2px 8px',
+                                    borderRadius: '8px',
+                                    fontSize: '0.8rem'
+                                }}>{aluno.pendentes}</span>
                         </td>
                         <td style={tdStyle}>
-                <span style={{
-                    backgroundColor: riscoCor[aluno.risco],
-                    color: '#fff',
-                    padding: '2px 8px',
-                    borderRadius: '8px',
-                    fontSize: '0.8rem'
-                }}>{aluno.risco}</span>
+                                <span style={{
+                                    backgroundColor: riscoCor[aluno.risco],
+                                    color: '#fff',
+                                    padding: '2px 8px',
+                                    borderRadius: '8px',
+                                    fontSize: '0.8rem'
+                                }}>{aluno.risco}</span>
                         </td>
                         <td style={tdStyle}>
                             <Link
