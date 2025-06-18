@@ -21,7 +21,7 @@ function App() {
             <ul>
               <li><Link to="/">Dashboard</Link></li>
               <li><Link to="/alunos">Alunos</Link></li>
-              <li><Link to="/alertas">Alertas de Evasão</Link></li>
+              <li><Link to="/alertas">Converse com a IA</Link></li>
               <li><Link to="/relatorios">Relatórios</Link></li>
             </ul>
           </nav>
