@@ -1,11 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Cards from '../../Components/Cards/Cards';
-import {faUserGraduate, faExclamationTriangle, faChartLine, faStar} from '@fortawesome/free-solid-svg-icons';
+import { faUserGraduate, faExclamationTriangle, faChartLine, faStar } from '@fortawesome/free-solid-svg-icons';
 import './Dashboard.scss';
 import GraficoAtividade from '../../Components/grafico_atvSemanal/grafico_atvSemanal';
 import GraficoBarras from '../../Components/grafico_barrras/grafico_barras';
 import ListaPendencias from '../../Components/ListaPendencias/ListaPendencias';
 import Spiner from '../../Components/Spiner/Spiner';
+import Relatorios from "../Relatorios/Relatorios.jsx";
 
 const Dashboard = () => {
     const [usuarios, setUsuarios] = useState([]);
@@ -24,6 +25,24 @@ const Dashboard = () => {
         medio: 0,
         baixo: 0,
     });
+
+    const [estatisticas, setEstatisticas] = useState({
+        totalAlunos: 0,
+        alunosEmRisco: 0,
+        totalAcoes: 0,
+        mediaNotas: 0,
+        alunosPorRisco: {
+            alto: 0,
+            medio: 0,
+            baixo: 0,
+        },
+    });
+
+    useEffect(() => {
+        if (alunosValidos.length > 0) {
+            calcularEstatisticas(alunosValidos);
+        }
+    }, [alunosValidos]);
 
     const calcularRisco = (user) => {
         const hoje = new Date();
@@ -87,37 +106,46 @@ const Dashboard = () => {
         buscarUsuarios();
     }, []);
 
+    // 3. Modifique o useEffect dos logs para usar a nova função
     useEffect(() => {
         const buscarLogs = async () => {
             if (!alunosValidos.length) return;
 
             setLoadingLogs(true);
-
             try {
-                const promessas = alunosValidos.map(async user => {
-                    const res = await fetch('http://localhost:5164/api/LogsUsuario/logs', {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify(user.user_id)
-                    });
-                    const dados = await res.json();
-                    return {userId: user.user_id, logs: dados};
+                // Envia todos os IDs em uma única requisição
+                const userIds = alunosValidos.map(aluno => aluno.user_id);
+
+                const response = await fetch('http://localhost:5164/api/LogsUsuario/logs-batch', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userIds)
                 });
 
-                const logsUsuarios = await Promise.all(promessas);
-                setLogs(logsUsuarios);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
 
-                let somaNotas = 0;
+                const resultados = await response.json();
+                console.log('Logs obtidos em lote:', resultados.length);
 
-                logsUsuarios.forEach(({userId, logs}) => {
-                    const user = alunosValidos.find(u => u.user_id === userId);
-                    if (!user) return;
-                    const nota = calcularNotaAluno(logs);
-                    somaNotas += nota;
+                // Atualiza os alunos mantendo TODOS os dados originais
+                const alunosAtualizados = alunosValidos.map(aluno => {
+                    const userLogs = resultados.find(r => r.userId === aluno.user_id)?.logs ?? [];
+                    return {
+                        ...aluno, // Mantém todos os dados originais, incluindo o risco
+                        logs: userLogs
+                    };
                 });
 
-                setTotalAcoes(logsUsuarios.reduce((acc, curr) => acc + curr.logs.length, 0));
-                setMediaNotas((somaNotas / logsUsuarios.length).toFixed(1));
+                // Atualiza o estado com os alunos completos
+                setAlunosValidos(alunosAtualizados);
+
+                // Log para debug
+                console.log('Alunos atualizados com logs:', {
+                    total: alunosAtualizados.length,
+                    comLogs: alunosAtualizados.filter(a => a.logs?.length > 0).length
+                });
 
             } catch (err) {
                 console.error('Erro ao buscar logs:', err);
@@ -127,53 +155,152 @@ const Dashboard = () => {
         };
 
         buscarLogs();
-    }, [alunosValidos]);
+    }, [alunosValidos.length]);
 
-    const calcularNotaAluno = (logsUsuario) => {
+    const calcularEngajamento = (logs) => {
+        if (!logs || logs.length === 0) return 0;
+
         const hoje = new Date();
-        const pesos = {graded: 10, submitted: 7, viewed: 2, completed: 8, attempted: 5};
+        const pesos = {
+            graded: 10,    // Atividade avaliada
+            submitted: 7,  // Envio de atividade
+            viewed: 2,     // Visualização de conteúdo
+            completed: 8,  // Conclusão de atividade
+            attempted: 5   // Tentativa de atividade
+        };
 
-        const notaTotal = logsUsuario.reduce((acc, log) => {
+        const pontosTotal = logs.reduce((acc, log) => {
             const peso = pesos[log.action] || 0;
             if (!peso) return acc;
 
-            const dias = (hoje - new Date(log.date)) / (1000 * 60 * 60 * 24);
-            const fator = dias <= 30 ? 1 : dias <= 60 ? 0.7 : dias <= 90 ? 0.5 : 0.2;
-            return acc + peso * fator;
+            const dias = Math.floor((hoje - new Date(log.date)) / (1000 * 60 * 60 * 24));
+            let fator = 1;
+            if (dias > 30) fator = 0.7;
+            if (dias > 60) fator = 0.5;
+            if (dias > 90) fator = 0.2;
+
+            return acc + (peso * fator);
         }, 0);
 
-        const max = 10 * logsUsuario.length;
-        return Math.min(10, Math.max(0, (notaTotal / max) * 10));
+        const maxPontosPossivel = logs.length * 10;
+        const engajamento = Math.round((pontosTotal / maxPontosPossivel) * 100);
+
+        return Math.min(100, engajamento);
     };
 
-    if (loadingUsuarios) return <div className='spiner'><Spiner/> Buscando usuários...</div>;
+    const calcularNota = (logs) => {
+        if (!logs || logs.length === 0) return 0;
+
+        const totalEsperado = 50;
+        const targetsValidos = ["course", "user_list", "user_profile", "grade_report", "user_report"];
+
+        const filtrarInteracoesValidas = (logs) => {
+            return logs.filter(log => log.action === "viewed" && targetsValidos.includes(log.target));
+        };
+
+        const interacoes = filtrarInteracoesValidas(logs);
+        const participacao = Math.min(100, Math.floor((interacoes.length / totalEsperado) * 100));
+
+        const totalLogsNorm = Math.min(logs.length, 100);
+        const interacoesNorm = Math.min(interacoes.length * 10, 100);
+        const participacaoNorm = participacao;
+
+        const pesoLogs = 1;
+        const pesoInteracoes = 2;
+        const pesoParticipacao = 3;
+        const somaPesos = pesoLogs + pesoInteracoes + pesoParticipacao;
+
+        const nota = (
+            (totalLogsNorm * pesoLogs) +
+            (interacoesNorm * pesoInteracoes) +
+            (participacaoNorm * pesoParticipacao)
+        ) / somaPesos;
+
+        return nota;
+    };
+
+    if (loadingUsuarios) return <div className='spiner'><Spiner /> Buscando usuários...</div>;
+
+    const calcularEstatisticas = (alunos) => {
+        if (!alunos || !alunos.length) return;
+        const riscos = {
+            alto: alunos.filter(a => a.risco === 'Alto risco').length,
+            medio: alunos.filter(a => a.risco === 'Médio risco').length,
+            baixo: alunos.filter(a => a.risco === 'Baixo risco').length
+        };
+
+        // Cálculo de médias
+        let somaEngajamento = 0;
+        let somaNotas = 0;
+
+        alunos.forEach(aluno => {
+            somaEngajamento += calcularEngajamento(aluno.logs || []);
+            somaNotas += calcularNota(aluno.logs || []);
+        });
+
+        const stats = {
+            totalAlunos: alunos.length,
+            alunosRisco: riscos.alto + riscos.medio,
+            mediaEngajamento: Math.round(somaEngajamento / alunos.length),
+            mediaNotas: Number((somaNotas / alunos.length).toFixed(1)),
+            alunosPorRisco: riscos
+        };
+
+        setEstatisticas(stats);
+        console.log('Estatísticas calculadas:', {
+            riscos,
+            stats
+        });
+    };
+
+
 
     return (
         <div className='dashboard-section'>
             <h2 className='title-section'>Dashboard</h2>
 
             <div className='Cards'>
-                <Cards title="Total de Alunos" quantidade={alunosValidos.length} icon={faUserGraduate}
-                       porcentagem="+12%"
-                       informacao=" do semestre anterior"/>
-                <Cards title="Alunos em risco" quantidade={alunosPorRisco.alto} icon={faExclamationTriangle}
-                       porcentagem="14%"
-                       informacao=" dos alunos ativos" loading={loadingLogs}/>
-                <Cards title="Taxa de Engajamento" quantidade={`${totalAcoes}%`} icon={faChartLine} porcentagem="+4%"
-                       informacao=" usuários ativos nos últimos 7 dias"/>
-                <Cards title="Média de Notas" quantidade={mediaNotas} icon={faStar} porcentagem="+3%"
-                       informacao=" no semestre atual" loading={loadingLogs}/>
+                <Cards
+                    title="Total de Alunos"
+                    quantidade={estatisticas.totalAlunos}
+                    icon={faUserGraduate}
+                    porcentagem="+12%"
+                    informacao=" do semestre anterior"
+                />
+                <Cards
+                    title="Alunos em risco"
+                    quantidade={estatisticas.alunosRisco}
+                    icon={faExclamationTriangle}
+                    porcentagem={`${((estatisticas.alunosRisco / estatisticas.totalAlunos) * 100).toFixed(0)}%`}
+                    informacao=" dos alunos ativos"
+                    loading={loadingLogs}
+                />
+                <Cards
+                    title="Taxa de Engajamento"
+                    quantidade={`${estatisticas.mediaEngajamento}`}
+                    icon={faChartLine}
+                    porcentagem="+4%"
+                    informacao=" usuários ativos nos últimos 7 dias"
+                />
+                <Cards
+                    title="Média de Notas"
+                    quantidade={estatisticas.mediaNotas}
+                    icon={faStar}
+                    porcentagem="+3%"
+                    informacao=" no semestre atual"
+                    loading={loadingLogs}
+                />
             </div>
 
             <div className='graficos'>
-                <GraficoAtividade/>
-                <GraficoBarras quantidade={alunosPorRisco}/>
+                <GraficoAtividade />
+                <GraficoBarras quantidade={alunosPorRisco} />
             </div>
 
             {loadingLogs ? (
-                <div className='spiner'><Spiner/> Analisando logs dos alunos...</div>
+                <div className='spiner'><Spiner /> Analisando logs dos alunos...</div>
             ) : (
-                <ListaPendencias className="listaPendecias" pendencias={pendencias}/>
+                <ListaPendencias className="listaPendecias" pendencias={pendencias} />
             )}
         </div>
     );

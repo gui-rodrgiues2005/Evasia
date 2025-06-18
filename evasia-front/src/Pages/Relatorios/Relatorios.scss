@@ -1,0 +1,491 @@
+// Variáveis de cores
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$danger-color: #e74c3c;
+$warning-color: #f39c12;
+$success-color: #27ae60;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$border-color: #dfe6e9;
+$text-color: #34495e;
+$text-light: #7f8c8d;
+
+// Mixins
+@mixin card-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+// Animations
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Estilos principais
+.relatoriosContainer {
+  width: 100%;  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-color;
+  max-width: 1600px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
+
+  h2 {
+    color: $dark-color;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+}
+
+// Seção de métricas
+.metricsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.metricCard {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  @include card-shadow;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid $primary-color;
+
+  &.loading {
+    min-height: 100px;
+    @include loading-skeleton;
+    
+    * {
+      visibility: hidden;
+    }
+  }
+
+  &--risk {
+    border-left-color: $danger-color;
+  }
+
+  &--engagement {
+    border-left-color: $secondary-color;
+  }
+
+  &--average {
+    border-left-color: $warning-color;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $text-light;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .metricValue {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: $dark-color;
+  }
+
+  .metricSubtext {
+    font-size: 0.8rem;
+    color: $text-light;
+  }
+
+  .trendIndicator {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    background: rgba($secondary-color, 0.1);
+    color: $secondary-color;
+    font-weight: 600;
+
+    &.negative {
+      background: rgba($danger-color, 0.1);
+      color: $danger-color;
+    }
+  }
+}
+
+// Botão principal
+.generateButton {
+  background: $secondary-color;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  @include card-shadow;
+
+  &:hover {
+    background: darken($secondary-color, 5%);
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .spinner {
+    margin-right: 0.5rem;
+  }
+}
+
+// Layout principal
+.layoutContainer {
+  display: flex;
+  gap: 1.5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+// Sidebar
+.sidebar {
+  width: 280px;
+  background: white;
+  border-radius: 10px;
+  @include card-shadow;
+  padding: 1.5rem;
+  height: fit-content;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.searchInput {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+  }
+}
+
+.reportsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color $light-color;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $light-color;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 3px;
+  }
+}
+
+.reportItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($primary-color, 0.05);
+  }
+
+  &.selected {
+    background: rgba($primary-color, 0.1);
+    border-left: 3px solid $primary-color;
+  }
+
+  .icon {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    color: $primary-color;
+  }
+
+  .reportInfo {
+    flex: 1;
+
+    .title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .date {
+      font-size: 0.8rem;
+      color: $text-light;
+    }
+  }
+}
+
+// Área de detalhes
+.detailArea {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  @include card-shadow;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease-out;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $dark-color;
+    margin: 0;
+  }
+}
+
+.exportButtons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.3rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background: darken($primary-color, 5%);
+    }
+
+    &.excelButton {
+      background: $success-color;
+
+      &:hover {
+        background: darken($success-color, 5%);
+      }
+    }
+  }
+}
+
+.chartContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  @include card-shadow;
+}
+
+// Tabela de alunos
+.studentsTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+
+  thead {
+    th {
+      background: $primary-color;
+      color: white;
+      padding: 1rem;
+      font-weight: 600;
+      text-align: left;
+      position: sticky;
+      top: 0;
+
+      &:first-child {
+        border-top-left-radius: 8px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 8px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background 0.2s;
+
+      &:nth-child(even) {
+        background: rgba($light-color, 0.5);
+      }
+
+      &:hover {
+        background: rgba($primary-color, 0.05);
+      }
+
+      td {
+        padding: 1rem;
+        border-bottom: 1px solid $border-color;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+// Componentes específicos
+.riskBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .barContainer {
+    width: 80px;
+    background: $border-color;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .bar {
+    height: 10px;
+    border-radius: 4px;
+
+    &.highRisk {
+      background: $danger-color;
+    }
+
+    &.mediumRisk {
+      background: $warning-color;
+    }
+
+    &.lowRisk {
+      background: $success-color;
+    }
+  }
+}
+
+.profileLink {
+  color: $primary-color;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Estado vazio
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: $text-light;
+
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $border-color;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: $text-color;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .studentsTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

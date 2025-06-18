@@ -17,7 +17,7 @@ const Evasao = ({ risco }) => {
 
   return (
     <div className={`evasao-container ${cor}`}>
-      <p>⚠️ Risco de evasão: <strong>{risco}</strong></p>
+      <p>⚠️Este aluno tem um <strong>{risco}</strong>de evasão</p>
     </div>
   );
 };
