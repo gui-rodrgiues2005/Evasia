@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
 import Spiner from '../../Components/Spiner/Spiner';
+import './Alunos.scss';
+
+const frasesLoading = [
+    "Analisando informações acadêmicas...",
+    "Coletando dados de participação dos alunos...",
+    "Calculando indicadores de risco de evasão...",
+    "Por favor, aguarde. Isso pode levar alguns segundos."
+];
 
 const Alunos = () => {
     const [filtro, setFiltro] = useState('Todos');
@@ -18,6 +26,20 @@ const Alunos = () => {
     const [loadingItems, setLoadingItems] = useState({});
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
+    const [fraseIndex, setFraseIndex] = useState(0);
+
+    useEffect(() => {
+        if (loading || loadingLogs) {
+            setFraseIndex(0);
+            const interval = setInterval(() => {
+                setFraseIndex(prev =>
+                    prev < frasesLoading.length - 1 ? prev + 1 : 0
+                );
+            }, 2500); // Troca a cada 2.5 segundos
+
+            return () => clearInterval(interval);
+        }
+    }, [loading, loadingLogs]);
 
     useEffect(() => {
         const filtroParam = searchParams.get('filtro');
@@ -321,138 +343,129 @@ const Alunos = () => {
         return matchBusca && matchFiltro;
     });
 
-    if (loading) return <div className='spiner'><Spiner /> Buscando dados....</div>;
 
+
+    if (loading) return <div className='spiner'><Spiner /> Verificando dados....</div>;
+    if (loading || loadingLogs) {
+        return (
+            <div className="loadingOverlay">
+                <div className="spinner" />
+                <div className="loadingText">
+                    <p>{frasesLoading[fraseIndex]}</p>
+                </div>
+            </div>
+        );
+    }
 
     return (
-        <div style={{ padding: '1rem' }}>
+        <div className="alunosContainer">
             <style>{pulseAnimation}</style>
+            <h2>Painel de Alunos</h2>
 
-            <h2 style={{ marginBottom: '1rem' }}>Alunos</h2>
+            <div className="buscas">
+                <div className="filters">
+                    {['Todos', 'Alto risco', 'Médio risco', 'Baixo risco'].map(item => (
+                        <button
+                            key={item}
+                            onClick={() => {
+                                setFiltro(item);
+                                navigate(item === 'Todos' ? '/alunos' : `/alunos?filtro=${encodeURIComponent(item)}`);
+                            }}
+                            className={filtro === item ? 'active' : ''}
+                        >
+                            {item}
+                        </button>
+                    ))}
+                </div>
 
-            <input
-                type="text"
-                placeholder="Buscar alunos..."
-                value={busca}
-                onChange={e => setBusca(e.target.value)}
-                style={{
-                    padding: '0.5rem',
-                    width: '300px',
-                    marginBottom: '1rem',
-                    border: '1px solid #ccc',
-                    borderRadius: '6px'
-                }}
-            />
+                <div class="group">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                            ></path>
+                        </g>
+                    </svg>
 
-            <div style={{ marginBottom: '1rem' }}>
-                {['Todos', 'Alto risco', 'Médio risco', 'Baixo risco'].map(item => (
-                    <button
-                        key={item}
-                        onClick={() => {
-                            setFiltro(item);
-                            navigate(item === 'Todos' ? '/alunos' : `/alunos?filtro=${encodeURIComponent(item)}`);
-                        }}
-                        style={{
-                            marginRight: '0.5rem',
-                            backgroundColor: filtro === item ? '#dceeff' : '#f1f1f1',
-                            border: '1px solid #ccc',
-                            borderRadius: '6px',
-                            padding: '0.4rem 1rem',
-                            cursor: 'pointer',
-                            fontWeight: filtro === item ? 'bold' : 'normal'
-                        }}
-                    >
-                        {item}
-                    </button>
-                ))}
+                    <input
+                        id="query"
+                        class="input"
+                        type="search"
+                        placeholder="Pesquisar alunos..."
+                        name="searchbar"
+                        value={busca}
+                        onChange={e => setBusca(e.target.value)}
+                    />
+                </div>
             </div>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+
+            <table className="studentsTable">
                 <thead>
-                    <tr style={{ background: '#f9f9f9' }}>
-                        <th style={thStyle}>Aluno</th>
-                        <th style={thStyle}>Curso</th>
-                        <th style={thStyle}>Último acesso</th>
-                        <th style={thStyle}>Participação</th>
-                        <th style={thStyle}>Média</th>
-                        <th style={thStyle}>Pendentes</th>
-                        <th style={thStyle}>Risco</th>
-                        <th style={thStyle}>Ações</th>
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Curso</th>
+                        <th>Último acesso</th>
+                        <th>Participação</th>
+                        <th>Média</th>
+                        <th>Pendentes</th>
+                        <th>Risco</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     {alunosFiltrados.map((aluno) => (
-                        <tr key={aluno.user_id} style={{ borderBottom: '1px solid #ddd' }}>
-                            <td style={tdStyle}>
+                        <tr key={aluno.user_id}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
-                                    <>
-                                        <strong>{aluno.name}</strong><br />
+                                    <div className="studentInfo">
+                                        <strong>{aluno.name}</strong>
                                         <small>{aluno.email}</small>
-                                    </>
+                                    </div>
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={tdStyle}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
                                     {aluno.curso}
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={tdStyle}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
                                     {new Date(aluno.user_lastaccess).toLocaleDateString()}
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={tdStyle}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
-                                    <div style={{ width: '100px', background: '#eee', borderRadius: '4px' }}>
-                                        <div style={{
-                                            width: `${aluno.participacao}%`,
-                                            background: '#333',
-                                            height: '8px',
-                                            borderRadius: '4px'
-                                        }}></div>
+                                    <div className="participationBar">
+                                        <div className="bar" style={{ width: `${aluno.participacao}%` }}></div>
                                     </div>
                                     <small>{aluno.participacao}%</small>
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={tdStyle}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
                                     {aluno.media}
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={{ ...tdStyle, textAlign: 'center' }}>
+                            <td style={{ textAlign: 'center' }}>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
-                                    <span style={{
-                                        background: '#e0f7e0',
-                                        padding: '2px 8px',
-                                        borderRadius: '8px',
-                                        fontSize: '0.8rem'
-                                    }}>{aluno.pendentes}</span>
+                                    <span className="pendingBadge">{aluno.pendentes}</span>
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={tdStyle}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
-                                    <span style={{
-                                        backgroundColor: riscoCor[aluno.risco.split(' ')[0]] || '#999',
-                                        color: '#fff',
-                                        padding: '2px 8px',
-                                        borderRadius: '8px',
-                                        fontSize: '0.8rem'
-                                    }}>
-                                        {aluno.risco}
+                                    <span className={`riskBadge ${String(aluno.risco).includes('Alto') ? 'high' :
+                                        String(aluno.risco).includes('Médio') ? 'medium' :
+                                            String(aluno.risco).includes('Baixo') ? 'low' : 'unknown'
+                                        }`}>
+                                        {aluno.risco || 'Desconhecido'}
                                     </span>
                                 </ContentOrPlaceholder>
                             </td>
-                            <td style={tdStyle}>
+                            <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
                                     <button
+                                        className="profileButton"
                                         onClick={() => irParaPerfil(aluno)}
-                                        style={{
-                                            padding: '0.25rem 0.5rem',
-                                            backgroundColor: '#007bff',
-                                            color: 'white',
-                                            border: 'none',
-                                            borderRadius: '4px',
-                                            cursor: 'pointer'
-                                        }}
                                     >
                                         Ver Perfil
                                     </button>
@@ -464,6 +477,7 @@ const Alunos = () => {
             </table>
         </div>
     );
+
 };
 
 const thStyle = {

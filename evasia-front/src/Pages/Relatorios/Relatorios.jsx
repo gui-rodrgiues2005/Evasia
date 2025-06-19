@@ -409,7 +409,7 @@ const Relatorios = () => {
       </div>
 
       <div className="layoutContainer">
-        <div className="sidebar">
+        <div className="sidebarclass">
           <input
             type="text"
             placeholder="Buscar relatórios..."
