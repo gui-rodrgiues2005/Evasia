@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add Controllers + Newtonsoft
 builder.Services.AddHttpClient<IUnifenasApiService, UnifenasApiService>();
+builder.Services.AddScoped<IAlunoService, AlunoService>();
 builder.Services.AddControllers()
     .AddNewtonsoftJson();
 

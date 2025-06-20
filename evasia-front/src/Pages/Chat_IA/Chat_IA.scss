@@ -1,0 +1,234 @@
+.chatia-container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.chatia-title {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.chatia-desc {
+  color: #888;
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.chatia-loading {
+  color: #3498db;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.chatia-error {
+  color: #dc3545;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.chatia-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.chatia-card {
+  flex: 1;
+  min-width: 200px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chatia-card-label {
+  font-size: 14px;
+  color: #888;
+  font-weight: 500;
+}
+
+.chatia-card-main {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.chatia-card-sub {
+  font-size: 13px;
+  color: #555;
+}
+
+.chatia-risco {
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 16px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  &.alto { background: #dc3545; }
+  &.medio { background: #ffc107; color: #222; }
+  &.baixo { background: #28a745; }
+}
+
+.chatia-row {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.chatia-col {
+  flex: 1 1 260px;
+  min-width: 260px;
+}
+
+.chatia-section-title {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.chatia-list {
+  margin: 0 0 18px 0;
+  padding-left: 18px;
+  font-size: 15px;
+  li {
+    margin-bottom: 4px;
+  }
+}
+
+.chatia-risk {
+  color: #dc3545;
+}
+
+.chatia-protect {
+  color: #28a745;
+}
+
+.chatia-historico {
+  background: #f4f8fb;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 32px;
+  h4 {
+    margin: 0 0 8px 0;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .chatia-historico-list {
+    font-size: 14px;
+    color: #666;
+    div {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.chatia-chatbox {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px #e3e3e3;
+}
+
+.chatia-chat-messages {
+  max-height: 220px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  padding: 12px;
+}
+
+.chatia-msg {
+  display: flex;
+  margin-bottom: 8px;
+  &.prof {
+    justify-content: flex-end;
+  }
+  &.ia {
+    justify-content: flex-start;
+  }
+}
+
+.chatia-msg-bubble {
+  background: #e9ecef;
+  color: #222;
+  border-radius: 16px;
+  padding: 8px 16px;
+  max-width: 70%;
+  font-size: 15px;
+  &.prof {
+    background: #3498db;
+    color: #fff;
+  }
+}
+
+.chatia-msg.prof .chatia-msg-bubble {
+  background: #3498db;
+  color: #fff;
+}
+
+.chatia-chat-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.chatia-chat-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+  &:focus {
+    border: 1.5px solid #3498db;
+  }
+}
+
+.chatia-chat-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover:not(:disabled) {
+    background: #217dbb;
+  }
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+// Responsivo
+@media (max-width: 700px) {
+  .chatia-container {
+    padding: 10px;
+  }
+  .chatia-cards, .chatia-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .chatia-card, .chatia-col {
+    min-width: 0;
+  }
+}

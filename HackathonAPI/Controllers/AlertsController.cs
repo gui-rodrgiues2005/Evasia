@@ -2,6 +2,7 @@ using HackathonAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using HackathonAPI.Services;
 
 namespace HackathonAPI.Controllers
 {
@@ -10,49 +11,60 @@ namespace HackathonAPI.Controllers
     public class AlertsController : ControllerBase
     {
         private static Dictionary<string, string> _chatResponses = new Dictionary<string, string>();
-    // ^ Idealmente, isso seria um banco de dados para persistência e escalabilidade.
-    // Usamos Dictionary para demonstração rápida.
+        // ^ Idealmente, isso seria um banco de dados para persistência e escalabilidade.
+        // Usamos Dictionary para demonstração rápida.
 
-    [HttpPost("receive-ai-response")]
-    public IActionResult ReceiveAIResponse([FromBody] object aiAnalysisData) // Recebe o JSON completo da IA
-    {
-        // O ideal é ter um modelo C# que mapeie exatamente o JSON de saída da IA.
-        // Por simplicidade, estamos recebendo como 'object' e serializando/deserializando.
+        private readonly IAlunoService _alunoService;
 
-        string jsonString = JsonConvert.SerializeObject(aiAnalysisData);
-        Console.WriteLine($"[ChatAIController] Resposta da IA recebida: {jsonString}");
-
-        // Tente extrair o user_id da análise da IA
-        string userId = "unknown_user";
-        try
+        public AlertsController(IAlunoService alunoService)
         {
-            dynamic analysis = JsonConvert.DeserializeObject<dynamic>(jsonString);
-            if (analysis.user_id != null)
+            _alunoService = alunoService;
+        }
+
+        [HttpGet("dados-para-analise/{userId}")]
+        public async Task<IActionResult> ObterDadosParaAnalise(string userId)
+        {
+            var dados = await _alunoService.ObterDadosParaAnaliseAsync(userId);
+
+            if (dados == null)
+                return NotFound(new { message = "Dados do aluno não encontrados." });
+
+            return Ok(dados);
+        }
+
+        [HttpPost("receive-ai-response")]
+        public IActionResult ReceiveAIResponse([FromBody] string aiAnalysisJson) // Recebe a string JSON bruta
+        {
+            Console.WriteLine($"[ChatAIController] Resposta da IA recebida: {aiAnalysisJson}");
+
+            string userId = "unknown_user";
+            try
             {
-                userId = analysis.user_id.ToString();
+                dynamic analysis = JsonConvert.DeserializeObject<dynamic>(aiAnalysisJson);
+                if (analysis.user_id != null)
+                {
+                    userId = analysis.user_id.ToString();
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao extrair user_id da análise da IA: {ex.Message}");
+            }
+
+            _chatResponses[userId] = aiAnalysisJson;
+
+            return Ok(new { message = "Resposta da IA recebida com sucesso pela API.", userId = userId });
         }
-        catch (Exception ex)
+
+
+        [HttpGet("get-ai-response/{userId}")]
+        public IActionResult GetAIResponse(string userId)
         {
-            Console.WriteLine($"Erro ao extrair user_id da análise da IA: {ex.Message}");
+            if (_chatResponses.ContainsKey(userId))
+            {
+                return Ok(JsonConvert.DeserializeObject(_chatResponses[userId]));
+            }
+            return NotFound(new { message = $"Nenhuma resposta da IA encontrada para o usuário {userId}." });
         }
-
-        // Armazena a resposta da IA. Associa ao user_id para recuperação posterior.
-        // Para um chat real, você precisaria de uma estrutura mais complexa
-        // para histórico, timestamps, etc.
-        _chatResponses[userId] = jsonString;
-
-        return Ok(new { message = "Resposta da IA recebida com sucesso pela API.", userId = userId });
-    }
-
-    [HttpGet("get-ai-response/{userId}")]
-    public IActionResult GetAIResponse(string userId)
-    {
-        if (_chatResponses.ContainsKey(userId))
-        {
-            return Ok(JsonConvert.DeserializeObject(_chatResponses[userId]));
-        }
-        return NotFound(new { message = $"Nenhuma resposta da IA encontrada para o usuário {userId}." });
-    }
     }
 }

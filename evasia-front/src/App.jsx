@@ -7,9 +7,9 @@ import './App.scss';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Alunos from './Pages/Alunos/Alunos';
 import PerfilAluno from './Pages/PerfilAluno/PerfilAluno';
-import Alertas from './Pages/AlertasEvasao/AlertaEvasao';
+import ChatIA from './Pages/Chat_IA/Chat_IA';
 import Relatorios from './Pages/Relatorios/Relatorios';
-import logo from './assets/logo.svg';
+// import logo from './assets/logo.svg';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -28,7 +28,7 @@ function App() {
         {/* Sidebar com condicional de classe */}
         <aside className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
           <div className="sidebar__logo">
-            <img src={logo} alt="Logo Evasia" />
+            {/* <img src={logo} alt="Logo Evasia" /> */}
           </div>
           <nav className="sidebar__nav">
             <ul>
@@ -46,7 +46,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/alunos" element={<Alunos />} />
             <Route path="/perfil-aluno/:user_id" element={<PerfilAluno />} />
-            <Route path="/alertas" element={<Alertas />} />
+            <Route path="/chat-ai/:user_id" element={<ChatIA />} />
             <Route path="/relatorios" element={<Relatorios />} />
           </Routes>
         </main>

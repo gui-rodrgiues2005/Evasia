@@ -343,7 +343,88 @@ const Alunos = () => {
         return matchBusca && matchFiltro;
     });
 
+    async function analisarAlunoViaFront(aluno) {
+        const logs = aluno.logs || [];
+        const user_id = aluno.userId || aluno.user_id;
+        const student_name = aluno.name;
+        const course_info = aluno.curso || "Curso desconhecido";
 
+        const ultimoAcesso = aluno.user_lastaccess ? new Date(aluno.user_lastaccess) : new Date();
+        const diasDesdeUltimoAcesso = Math.floor((Date.now() - ultimoAcesso.getTime()) / (1000 * 60 * 60 * 24));
+        const acessouUltimos7Dias = logs.some(log => {
+            const logDate = new Date(log.date);
+            return (Date.now() - logDate.getTime()) / (1000 * 60 * 60 * 24) <= 7;
+        });
+        const access_frequency = acessouUltimos7Dias ? "regular" : "irregular";
+
+        const riskFactors = [];
+        if (access_frequency === "irregular") riskFactors.push("acessos irregulares");
+        if (aluno.media < 6) riskFactors.push("nota abaixo da média");
+        if (aluno.pendentes > 0) riskFactors.push("atividades pendentes");
+
+        const protectiveFactors = [];
+        if (aluno.participacao > 70) protectiveFactors.push("participação ativa");
+        if (aluno.media >= 7) protectiveFactors.push("boas notas");
+
+        let immediate = [], followUp = [], priority = "low";
+        if (aluno.risco === "Alto risco") {
+            immediate = ["contatar aluno via e-mail", "agendar tutoria"];
+            followUp = ["monitorar acessos próximos 7 dias"];
+            priority = "high";
+        } else if (aluno.risco === "Médio risco") {
+            immediate = ["enviar lembrete de atividades"];
+            followUp = ["avaliar progresso em 1 semana"];
+            priority = "moderate";
+        }
+
+        const risk_score = Math.round((100 - diasDesdeUltimoAcesso) * 0.3 + aluno.participacao * 0.3 + aluno.media * 10 * 0.4);
+
+        const dadosParaIA = {
+            user_id,
+            student_name,
+            course_info,
+            last_access_analysis: {
+                last_access_date: ultimoAcesso.toISOString(),
+                days_since_access: diasDesdeUltimoAcesso,
+                access_frequency
+            },
+            academic_status: {
+                course_progress: "45%",
+                current_grades: aluno.media,
+                assignments_status: aluno.pendentes > 0 ? "pendentes" : "em dia"
+            },
+            risk_assessment: {
+                risk_level: aluno.risco,
+                risk_score,
+                confidence: 87,
+                primary_risk_factors: riskFactors,
+                protective_factors: protectiveFactors
+            },
+            recommendations: {
+                immediate_actions: immediate,
+                follow_up_actions: followUp,
+                contact_priority: priority
+            },
+            analysis_metadata: {
+                analyzed_at: new Date().toISOString(),
+                data_source: "Tela de alunos",
+                analyst: "Sistema Interno"
+            }
+        };
+
+        const response = await fetch("http://localhost:5164/api/Alerts/receive-ai-response", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(JSON.stringify(dadosParaIA))
+        });
+
+        if (response.headers.get("content-length") !== "0") {
+            const result = await response.json();
+            if (result.userId) {
+                window.location.href = `/chat-ai/${result.userId}`;
+            }
+        }
+    }
 
     if (loading) return <div className='spiner'><Spiner /> Verificando dados....</div>;
     if (loading || loadingLogs) {
@@ -461,6 +542,18 @@ const Alunos = () => {
                                     </span>
                                 </ContentOrPlaceholder>
                             </td>
+                            <td>
+                                <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
+                                    <button
+                                        className="profileButton"
+                                        onClick={() => analisarAlunoViaFront(aluno)}
+                                    >
+                                        Fazer uma Análise detalhada
+                                    </button>
+                                </ContentOrPlaceholder>
+                            </td>
+
+
                             <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
                                     <button
