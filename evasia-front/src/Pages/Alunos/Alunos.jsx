@@ -7,6 +7,10 @@ const frasesLoading = [
     "Analisando informações acadêmicas...",
     "Coletando dados de participação dos alunos...",
     "Calculando indicadores de risco de evasão...",
+    "Verificando a frequência de acesso dos alunos...",
+    "Analisando notas e pendências dos alunos...",
+    "Aguarde, estamos processando os dados...",
+    "Processando informações para você...",
     "Por favor, aguarde. Isso pode levar alguns segundos."
 ];
 
@@ -35,7 +39,7 @@ const Alunos = () => {
                 setFraseIndex(prev =>
                     prev < frasesLoading.length - 1 ? prev + 1 : 0
                 );
-            }, 2500); // Troca a cada 2.5 segundos
+            }, 2700);
 
             return () => clearInterval(interval);
         }

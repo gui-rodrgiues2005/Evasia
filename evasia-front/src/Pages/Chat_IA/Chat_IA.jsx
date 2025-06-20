@@ -30,6 +30,35 @@ const ChatIA = () => {
   const [sending, setSending] = useState(false);
   const chatEndRef = useRef(null);
 
+  useEffect(() => {
+    if (user_id) {
+      // Busca análise detalhada automaticamente
+      (async () => {
+        setLoading(true);
+        setShowAnalysis(false);
+        try {
+          const analiseRes = await fetch(`http://localhost:5164/api/Alerts/get-ai-response/${user_id}`);
+          if (analiseRes.ok) {
+            const dados = await analiseRes.json();
+            setAiResponse(typeof dados === 'string' ? JSON.parse(dados) : dados);
+            setShowAnalysis(true);
+            setChat(prev => [
+              ...prev,
+              { sender: 'ia', text: `Aqui está a análise detalhada do aluno selecionado.` }
+            ]);
+          }
+        } catch (e) {
+          setChat(prev => [
+            ...prev,
+            { sender: 'ia', text: `Ocorreu um erro ao buscar os dados do aluno selecionado.` }
+          ]);
+        }
+        setLoading(false);
+      })();
+    }
+    // eslint-disable-next-line
+  }, [user_id]);
+
   // Função para buscar e analisar aluno pelo nome (igual à tela de alunos)
   const buscarAnalisePorNome = async (nomeAluno) => {
     setLoading(true);
@@ -48,7 +77,7 @@ const ChatIA = () => {
       if (!aluno) {
         setChat(prev => [
           ...prev,
-          { sender: 'ia', text: `Aluno "${nomeAluno}" não encontrado. Por favor, digite o nome completo ou parte do nome de um aluno válido.` }
+          { sender: 'ia', text: 'Desculpa, não entendi, reescreva por favor !' }
         ]);
         setLoading(false);
         return;
