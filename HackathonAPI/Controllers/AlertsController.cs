@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using HackathonAPI.Services;
+using System.Text;
 
 namespace HackathonAPI.Controllers
 {
@@ -66,5 +67,23 @@ namespace HackathonAPI.Controllers
             }
             return NotFound(new { message = $"Nenhuma resposta da IA encontrada para o usuário {userId}." });
         }
+
+        [HttpPost("chat-ai")]
+        public async Task<IActionResult> PerguntaGeral([FromBody] ChatMensagem mensagem)
+        {
+            var client = new HttpClient();
+            var conteudo = new StringContent(JsonConvert.SerializeObject(mensagem), Encoding.UTF8, "application/json");
+
+            var resposta = await client.PostAsync("https://https://guilherme18.app.n8n.cloud/webhook-test/77bde499-67c0-4418-a761-6df8d479dd7a", conteudo);
+            var jsonResposta = await resposta.Content.ReadAsStringAsync();
+
+            return Ok(jsonResposta);
+        }
+
+        public class ChatMensagem
+        {
+            public string mensagem { get; set; }
+        }
+
     }
 }

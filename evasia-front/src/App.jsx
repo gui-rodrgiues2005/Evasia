@@ -34,7 +34,7 @@ function App() {
             <ul>
               <li><Link to="/" onClick={() => setSidebarOpen(false)}>Dashboard</Link></li>
               <li><Link to="/alunos" onClick={() => setSidebarOpen(false)}>Monitoramento Estudantil</Link></li>
-              <li><Link to="/alertas" onClick={() => setSidebarOpen(false)}>Converse com a IA</Link></li>
+              <li><Link to="/chat-ai/:user_id" onClick={() => setSidebarOpen(false)}>Converse com a IA</Link></li>
               <li><Link to="/relatorios" onClick={() => setSidebarOpen(false)}>Relatórios</Link></li>
             </ul>
           </nav>
