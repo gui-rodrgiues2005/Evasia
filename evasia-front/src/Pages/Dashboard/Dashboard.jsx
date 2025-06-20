@@ -6,7 +6,6 @@ import GraficoAtividade from '../../Components/grafico_atvSemanal/grafico_atvSem
 import GraficoBarras from '../../Components/grafico_barrras/grafico_barras';
 import ListaPendencias from '../../Components/ListaPendencias/ListaPendencias';
 import Spiner from '../../Components/Spiner/Spiner';
-import Relatorios from "../Relatorios/Relatorios.jsx";
 
 const Dashboard = () => {
     const [usuarios, setUsuarios] = useState([]);
@@ -252,8 +251,6 @@ const Dashboard = () => {
             stats
         });
     };
-
-
 
     return (
         <div className='dashboard-section'>

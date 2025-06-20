@@ -15,13 +15,19 @@ const Cards = ({ title, quantidade, icon, porcentagem, informacao, loading }) =>
         ) : (
           <>
             <h2>{quantidade}</h2>
-            <p>{porcentagem} {informacao}</p>
+            <p>
+              {porcentagem && (
+                <span className={`porcentagem ${Number(porcentagem) < 0 ? 'negativo' : ''}`}>
+                  {porcentagem}
+                </span>
+              )}
+              {informacao}
+            </p>
           </>
         )}
       </div>
     </div>
   );
 };
-
 
 export default Cards;

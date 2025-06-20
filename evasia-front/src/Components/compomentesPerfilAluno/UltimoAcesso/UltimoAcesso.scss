@@ -1,0 +1,40 @@
+.ultimo-acesso {
+  background: #1e1f26;
+  border: 1px solid #2a2b33;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    color: #e0e1e9;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &::before {
+      content: '⏱️';
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    color: #bdbecb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    border-left: 3px solid #4a6fa5;
+  }
+
+  // Destaque para mensagens importantes
+  .alerta {
+    color: #f39c12;
+    font-weight: 500;
+  }
+}

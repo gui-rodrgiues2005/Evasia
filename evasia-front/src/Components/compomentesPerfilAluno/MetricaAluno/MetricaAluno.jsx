@@ -2,15 +2,15 @@ import React from 'react';
 import './MetricaAluno.scss';
 
 const MetricaAluno = ({ participacao, media, conclusao }) => {
-  const safeFormat = (value) => {
-    if (value === null || value === undefined || isNaN(value)) return '0.0';
-    return value.toFixed(1);
+  const safeFormat = (value, tipo) => {
+    if (value === null || value === undefined || isNaN(value)) return '0';
+    if (tipo === 'media') return Number(value).toFixed(1);
+    return Math.round(value).toString();
   };
 
   const metrics = [
     { label: 'Participação', value: participacao, display: `${safeFormat(participacao)}%` },
-    { label: 'Média Geral', value: media, display: `${safeFormat(media)}%` },
-    { label: 'Taxa de Conclusão', value: conclusao, display: `${safeFormat(conclusao)}%` },
+    { label: 'Média Geral', value: media, display: `${safeFormat(media, 'media')}` },
   ];
 
   return (
@@ -29,6 +29,5 @@ const MetricaAluno = ({ participacao, media, conclusao }) => {
     </div>
   );
 };
-
 
 export default MetricaAluno;

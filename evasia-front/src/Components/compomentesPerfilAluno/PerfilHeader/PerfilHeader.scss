@@ -1,32 +1,61 @@
+// Variáveis de cores
+$dark-bg: #1f212a;
+$dark-text: #d1d2de;
+$light-text: #ffffff;
+$accent-color: #4a90e2;
+$border-color: #2d2f3a;
+
 .perfil-header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  gap: 1.5rem;
+  padding: 1.8rem 2rem;
+  background-color: $dark-bg;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 
-  .foto {
-    width: 60px;
-    height: 60px;
-    background: #ccc;
+  &__avatar-container {
+    background: lighten($dark-bg, 5%);
+    padding: 6px;
     border-radius: 50%;
-    margin-right: 10px;
+    border: 2px solid $accent-color;
   }
 
-  .dados {
-    h3 {
-      margin: 0;
-    }
+  &__image {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+  }
 
-    p {
-      margin: 0;
-      font-size: 14px;
-    }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
 
-    .risco-baixo {
-      background-color: #d4edda;
-      color: #155724;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 12px;
+  &__name {
+    margin: 0;
+    font-size: 1.50rem;
+    font-weight: 700;
+    color: $light-text;
+  }
+
+  &__course {
+    margin: 0;
+    font-size: 1rem;
+    color: $dark-text;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    &::before {
+      content: "•";
+      color: $accent-color;
+      font-size: 1.2rem;
     }
   }
 }

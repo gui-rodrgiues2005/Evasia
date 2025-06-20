@@ -1,49 +1,103 @@
 .card {
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease;
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.10), 0 1.5px 6px rgba(44, 62, 80, 0.04);
+  transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
+  min-width: 220px;
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 20px;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(44, 62, 80, 0.16), 0 2px 8px rgba(44, 62, 80, 0.06);
   }
 
-  .card-header {
+  .card-icon {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: #f5f8fa;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-
-    h2 {
-      font-size: 1rem;
-      color: #333;
-    }
-
-    .icon {
-      font-size: 1.6rem;
-      color: #0056b3;
-    }
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    font-size: 1.7rem;
+    color: #3498db;
+    z-index: 2;
   }
 
-  .card-body {
-    h1 {
-      font-size: 2rem;
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
       color: #222;
+      margin: 0.25rem 0 0.5rem 0;
+      line-height: 1.1;
     }
 
     p {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #666;
+      margin: 0;
 
       .porcentagem {
         font-weight: bold;
         color: #1f9d55; // verde (positivo)
         margin-right: 0.25rem;
       }
+      .negativo {
+        color: #e74c3c; // vermelho (negativo)
+      }
+    }
+
+    .loading {
+      color: #3498db;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 600px) {
+  .card {
+    min-width: 100%;
+    padding: 1.25rem 1rem;
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.3rem;
+      top: 1rem;
+      right: 1rem;
+    }
+    .card-content {
+      margin-top: 2rem;
+      h2 { font-size: 1.6rem; }
+      h3 { font-size: 1rem; }
     }
   }
 }

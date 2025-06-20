@@ -1,9 +1,7 @@
 .resumo-status {
-  margin-bottom: 20px;
-  background: #fff;
-  border: 1px solid #ddd;
+  margin-bottom: 1rem;
   border-radius: 8px;
-  padding: 16px;
+  padding: 1.5rem;
 
   ul {
     list-style: none;
@@ -11,26 +9,38 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1rem;
 
     li {
       display: flex;
       align-items: center;
-      font-size: 14px;
-      color: #333;
+      font-size: 0.9rem;
+      color: #2a2b33;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 1.75rem;
 
       strong {
-        margin-left: 4px;
+        margin-left: 0.25rem;
         font-weight: 600;
-        color: #000;
+        color: #2a2b33;
       }
 
-      // opcional: estilo para o emoji (ícone)
+      // Estilo para cada tipo de ícone
+      &:nth-child(1)::before { content: '📌'; }
+      &:nth-child(2)::before { content: '📈'; }
+      &:nth-child(3)::before { content: '✅'; }
+      
       &::before {
-        content: '';
-        display: inline-block;
-        width: 20px;
+        position: absolute;
+        left: 0;
+        font-size: 1rem;
       }
+
+      // Cores baseadas no status
+      &.status-alto strong { color: #e74c3c; }
+      &.status-medio strong { color: #f39c12; }
+      &.status-baixo strong { color: #27ae60; }
     }
   }
 }
