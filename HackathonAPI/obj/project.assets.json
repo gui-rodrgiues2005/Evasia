@@ -3148,23 +3148,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\guilh\\.nuget\\packages\\": {},
+    "C:\\Users\\UsuarioPc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guilh\\Documents\\Evasia\\HackathonAPI\\HackathonAPI.csproj",
+      "projectUniqueName": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\HackathonAPI.csproj",
       "projectName": "HackathonAPI",
-      "projectPath": "C:\\Users\\guilh\\Documents\\Evasia\\HackathonAPI\\HackathonAPI.csproj",
-      "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guilh\\Documents\\Evasia\\HackathonAPI\\obj\\",
+      "projectPath": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\HackathonAPI.csproj",
+      "packagesPath": "C:\\Users\\UsuarioPc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\UsuarioPc\\Documents\\projects\\hackathon\\HackathonAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\UsuarioPc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3237,7 +3237,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

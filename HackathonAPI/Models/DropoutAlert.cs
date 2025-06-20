@@ -2,20 +2,17 @@ namespace HackathonAPI.Models
 {
     public class DropoutAlert
     {
-        public string Alert_Type { get; set; }
-        public StudentInfo Student { get; set; }
-        public RiskInfo RiskData { get; set; }
-        public List<string> Recommendations { get; set; }
-        public string Priority { get; set; }
-        public string Analyzed_At { get; set; }
-        public string Data_Source { get; set; }
+        public string user_id { get; set; } // Ajuste para user_id minúsculo se a IA retornar assim
+        public string Student_name { get; set; }
+        public string Course_info { get; set; }
+        
     }
 
     public class StudentInfo
     {
-        public string User_Id { get; set; }
-        public string Name { get; set; }
-        public string Course { get; set; }
+        public string user_id { get; set; }
+        public string name { get; set; }
+        public string course { get; set; }
     }
 
     public class RiskInfo
