@@ -1,6 +1,7 @@
 import React from "react";
 import './Cards.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LoadingCards from "../LoadingCards/LoadingCards";
 
 const Cards = ({ title, quantidade, icon, porcentagem, informacao, loading }) => {
   return (
@@ -11,7 +12,7 @@ const Cards = ({ title, quantidade, icon, porcentagem, informacao, loading }) =>
       <div className='card-content'>
         <h3>{title}</h3>
         {loading ? (
-          <p className="loading">Carregando...</p>
+          <LoadingCards />
         ) : (
           <>
             <h2>{quantidade}</h2>

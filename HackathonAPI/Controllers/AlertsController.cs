@@ -74,7 +74,7 @@ namespace HackathonAPI.Controllers
             var client = new HttpClient();
             var conteudo = new StringContent(JsonConvert.SerializeObject(mensagem), Encoding.UTF8, "application/json");
 
-            var resposta = await client.PostAsync("https://https://guilherme18.app.n8n.cloud/webhook-test/77bde499-67c0-4418-a761-6df8d479dd7a", conteudo);
+            var resposta = await client.PostAsync("https://guilherme18.app.n8n.cloud/webhook/77bde499-67c0-4418-a761-6df8d479dd7a", conteudo);
             var jsonResposta = await resposta.Content.ReadAsStringAsync();
 
             return Ok(jsonResposta);

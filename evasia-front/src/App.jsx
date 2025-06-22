@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './App.scss';
+import logo from './assets/logo_evasia.png';
 
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Alunos from './Pages/Alunos/Alunos';
 import PerfilAluno from './Pages/PerfilAluno/PerfilAluno';
 import ChatIA from './Pages/Chat_IA/Chat_IA';
 import Relatorios from './Pages/Relatorios/Relatorios';
-// import logo from './assets/logo.svg';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -18,17 +18,29 @@ function App() {
     setSidebarOpen(!sidebarOpen);
   };
 
+
+
+
   return (
     <Router>
+      <button
+        className={`sidebar-toggle${sidebarOpen ? ' open' : ''}`}
+        onClick={toggleSidebar}
+        aria-label="Abrir/fechar menu"
+      >
+        <span className="toggle">
+          <div id="bar1" className="bars"></div>
+          <div id="bar2" className="bars"></div>
+          <div id="bar3" className="bars"></div>
+        </span>
+      </button>
       <div className="app-container">
-        <button className="sidebar-toggle" onClick={toggleSidebar}>
-          {sidebarOpen ? <FaTimes /> : <FaBars />}
-        </button>
+
 
         {/* Sidebar com condicional de classe */}
         <aside className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
           <div className="sidebar__logo">
-            {/* <img src={logo} alt="Logo Evasia" /> */}
+            <img src={logo} alt="Logo Evasia" />
           </div>
           <nav className="sidebar__nav">
             <ul>

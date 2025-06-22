@@ -557,7 +557,6 @@ const Alunos = () => {
                                 </ContentOrPlaceholder>
                             </td>
 
-
                             <td>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
                                     <button

@@ -1,15 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList, Legend } from 'recharts';
 
-const data = [
-  { dia: 'Segunda', interacoes: 65 },
-  { dia: 'Terça', interacoes: 55 },
-  { dia: 'Quarta', interacoes: 63 },
-  { dia: 'Quinta', interacoes: 70 },
-  { dia: 'Sexta', interacoes: 60 },
-  { dia: 'Sábado', interacoes: 48 },
-  { dia: 'Domingo', interacoes: 32 },
-];
-
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -31,7 +21,7 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-const GraficoAtividade = () => (
+const GraficoAtividade = ({data}) => (
   <div style={{
     width: '100%',
     height: 300, 

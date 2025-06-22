@@ -283,7 +283,7 @@ const Relatorios = () => {
 
         return {
           nome: aluno.fullname || aluno.name,
-          curso: aluno.course || 'Não informado',
+          curso: 'Ciência da Computação', // Exemplo fixo, substitua conforme necessário
           nivelRisco: risco,
           porcentagemRisco: risco === 'Alto risco' ? 100 : risco === 'Médio risco' ? 50 : 25,
           ultimoAcesso: new Date(aluno.user_lastaccess).toLocaleDateString('pt-BR'),
@@ -370,6 +370,13 @@ const Relatorios = () => {
   const relsFiltrados = relatorios.filter(rel =>
     rel.titulo.toLowerCase().includes(busca.toLowerCase())
   );
+
+  const ContentOrPlaceholder = ({ isLoading, children }) => {
+    if (isLoading) {
+      return <LoadingPlaceholder />;
+    }
+    return children;
+  };
 
   return (
     <div className="relatoriosContainer">
@@ -489,13 +496,15 @@ const Relatorios = () => {
                       <td className="tableCell">{aluno.engajamento}%</td>
                       <td className="tableCell">{aluno.mediaNotas}</td>
                       <td className="tableCell">{aluno.ultimoAcesso}</td>
-                      <td className="tableCell">
-                        <a
-                          href={`#/perfil/${aluno.userId}`}
-                          className="profileLink"
-                        >
-                          Ver Perfil
-                        </a>
+                      <td>
+                        <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
+                          <button
+                            className="profileButton"
+                            onClick={() => irParaPerfil(aluno)}
+                          >
+                            Ver Perfil
+                          </button>
+                        </ContentOrPlaceholder>
                       </td>
                     </tr>
                   ))}

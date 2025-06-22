@@ -6,6 +6,8 @@ import GraficoAtividade from '../../Components/grafico_atvSemanal/grafico_atvSem
 import GraficoBarras from '../../Components/grafico_barrras/grafico_barras';
 import ListaPendencias from '../../Components/ListaPendencias/ListaPendencias';
 import Spiner from '../../Components/Spiner/Spiner';
+import LoadingCards from '../../Components/LoadingCards/LoadingCards';
+
 
 const Dashboard = () => {
     const [usuarios, setUsuarios] = useState([]);
@@ -252,6 +254,24 @@ const Dashboard = () => {
         });
     };
 
+    // Função para contar acessos por dia da semana
+    const getAcessosPorDia = () => {
+        const todosLogs = alunosValidos.flatMap(aluno => aluno.logs || []);
+        const dias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+        const acessos = { Domingo: 0, Segunda: 0, Terça: 0, Quarta: 0, Quinta: 0, Sexta: 0, Sábado: 0 };
+
+        todosLogs.forEach(log => {
+            if (!log.date) return;
+            const data = new Date(log.date);
+            const diaSemana = dias[data.getDay()];
+            acessos[diaSemana]++;
+        });
+        return dias.map(dia => ({
+            dia,
+            interacoes: acessos[dia]
+        }));
+    };
+
     return (
         <div className='dashboard-section'>
             <h2 className='title-section'>Dashboard</h2>
@@ -263,6 +283,7 @@ const Dashboard = () => {
                     icon={faUserGraduate}
                     porcentagem="+12%"
                     informacao=" do semestre anterior"
+                    loading={loadingUsuarios || loadingLogs}
                 />
                 <Cards
                     title="Alunos em risco"
@@ -270,7 +291,7 @@ const Dashboard = () => {
                     icon={faExclamationTriangle}
                     porcentagem={`${((estatisticas.alunosRisco / estatisticas.totalAlunos) * 100).toFixed(0)}%`}
                     informacao=" dos alunos ativos"
-                    loading={loadingLogs}
+                    loading={loadingUsuarios || loadingLogs}
                 />
                 <Cards
                     title="Taxa de Engajamento"
@@ -278,6 +299,7 @@ const Dashboard = () => {
                     icon={faChartLine}
                     porcentagem="+4%"
                     informacao=" usuários ativos nos últimos 7 dias"
+                    loading={loadingUsuarios || loadingLogs}
                 />
                 <Cards
                     title="Média de Notas"
@@ -285,20 +307,14 @@ const Dashboard = () => {
                     icon={faStar}
                     porcentagem="+3%"
                     informacao=" no semestre atual"
-                    loading={loadingLogs}
+                    loading={loadingUsuarios || loadingLogs}
                 />
             </div>
 
             <div className='graficos'>
-                <GraficoAtividade />
+                <GraficoAtividade data={getAcessosPorDia()} />
                 <GraficoBarras quantidade={alunosPorRisco} />
             </div>
-
-            {loadingLogs ? (
-                <div className='spiner'><Spiner /> Analisando logs dos alunos...</div>
-            ) : (
-                <ListaPendencias className="listaPendecias" pendencias={pendencias} />
-            )}
         </div>
     );
 };
