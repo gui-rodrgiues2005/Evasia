@@ -6,19 +6,20 @@ const ResumoStatus = ({ atividadesPendentes, userLastAccess, risco }) => {
     ? Math.floor((Date.now() - new Date(userLastAccess)) / (1000 * 60 * 60 * 24))
     : null;
 
-  const frequenciaTexto = diasDesdeUltimoAcesso === null
-    ? 'Indisponível'
-    : diasDesdeUltimoAcesso <= 3
-    ? 'Alta (acessou nos últimos 3 dias)'
-    : diasDesdeUltimoAcesso <= 7
-    ? 'Média (acessou na última semana)'
-    : 'Baixa (não acessa há mais de uma semana)';
+  const getFrequenciaTexto = (dias) => {
+    if (dias === null) return 'Indisponível';
+    if (dias <= 3) return 'Alta (acessou nos últimos 3 dias)';
+    if (dias <= 7) return 'Média (acessou na última semana)';
+    return 'Baixa (não acessa há mais de uma semana)';
+  };
 
-  const statusRetencao = risco === 'Alto'
-    ? 'Alto risco de evasão'
-    : risco === 'Médio'
-    ? 'Atenção moderada'
-    : 'Engajamento satisfatório';
+  const interpretarRisco = (risco) => {
+    switch (risco) {
+      case 'Alto risco': return '🔴 Alto risco de evasão';
+      case 'Médio risco': return '🟡 Atenção moderada';
+      default: return '🟢 Engajamento satisfatório';
+    }
+  };
 
   return (
     <div className="resumo-status">
@@ -33,10 +34,11 @@ const ResumoStatus = ({ atividadesPendentes, userLastAccess, risco }) => {
         </li>
         <li>
           Frequência de Acesso:{' '}
-          <strong>{frequenciaTexto}</strong>
+          <strong>{getFrequenciaTexto(diasDesdeUltimoAcesso)}</strong>
         </li>
-        <li className={`status-${risco.toLowerCase()}`}>
-          Status de Retenção: <strong>{statusRetencao}</strong>
+        <li className={`status-${risco.replace(' risco', '').toLowerCase()}`}>
+          Status de Retenção:{' '}
+          <strong>{interpretarRisco(risco)}</strong>
         </li>
       </ul>
     </div>

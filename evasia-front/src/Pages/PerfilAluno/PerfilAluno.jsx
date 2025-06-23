@@ -67,19 +67,16 @@ function calcularConclusao(logs) {
     return total === 0 ? 0 : Math.round((acessados / total) * 100);
 }
 
-function calcularRisco(logs) {
-    if (!logs.length) return 'Sem dados';
-    const lastAccess = new Date(logs[0].user_lastaccess);
+function calcularRisco(aluno, participacao = 0, media = 10) {
     const hoje = new Date();
+    const lastAccess = new Date(aluno.user_lastaccess);
     const diffDias = (hoje - lastAccess) / (1000 * 60 * 60 * 24);
 
-    if (diffDias > 30) {
-        return 'Alto risco';
-    } else if (diffDias > 7) {
-        return 'Médio risco';
-    } else {
-        return 'Baixo risco';
-    }
+    if (participacao < 40 && media < 6) return 'Alto risco';
+    if (participacao < 40 || media < 6) return 'Alto risco';
+    if (participacao >= 50 && diffDias <= 15 && media >= 6) return 'Baixo risco';
+    if (participacao < 60 || diffDias > 15 || media < 6.5) return 'Médio risco';
+    return 'Baixo risco';
 }
 
 function calcularAtividadesPendentes(logs) {
@@ -88,6 +85,7 @@ function calcularAtividadesPendentes(logs) {
     const pendentes = modulosTotais.length - modulosAcessados.length;
     return pendentes > 0 ? pendentes : 0;
 }
+
 
 const PerfilAluno = () => {
     const [logsAluno, setLogsAluno] = useState([]);
@@ -137,6 +135,7 @@ const PerfilAluno = () => {
             });
     }, [user_id, aluno]);
 
+
     return (
         <div className="perfil-container" style={{ padding: '20px', fontFamily: 'Arial' }}>
             <div style={{ marginBottom: '20px' }}>
@@ -158,13 +157,13 @@ const PerfilAluno = () => {
                         userLastAccess={aluno?.user_lastaccess}
                         risco={aluno?.risco}
                     />
-                    {logsAluno.length > 0 && <Evasao risco={calcularRisco(logsAluno)} />}
+                    {logsAluno.length > 0 && <Evasao risco={calcularRisco(aluno, participacao, media)} />}
                     <UltimoAcesso userLastAccess={aluno?.user_lastaccess} />
                 </div>
 
                 {/* Coluna da Direita */}
                 <div style={{ flex: 1 }}>
-                    <EvolucaoAluno user_id={user_id} />
+                    <EvolucaoAluno logs={logsAluno} />
                     <AnaliseTendencia logs={logsAluno} />
                 </div>
             </div>

@@ -1,29 +1,50 @@
 import React from 'react';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, ResponsiveContainer } from 'recharts';
 import './EvolucaoAluno.scss';
 
-const EvolucaoAluno = () => {
+// Copie esta função para cá
+function agruparPorMes(logs) {
+  const meses = {};
+
+  logs.forEach(log => {
+    const data = new Date(log.date);
+    const mesAno = `${data.getFullYear()}-${(data.getMonth() + 1).toString().padStart(2, '0')}`;
+
+    if (!meses[mesAno]) meses[mesAno] = [];
+    meses[mesAno].push(log);
+  });
+
+  // Transforma em array de objetos para o gráfico
+  return Object.entries(meses).map(([mes, logsMes]) => {
+    const participacao = Math.min(100, Math.floor(
+      logsMes.filter(l => l.action === "viewed").length / 5 * 100 // ajuste o divisor conforme sua regra
+    ));
+    return {
+      mes,
+      participacao
+      // média: ...
+    };
+  });
+}
+
+const EvolucaoAluno = ({ logs }) => {
+  // Gere os dados de evolução
+  const dadosEvolucao = agruparPorMes(logs);
+
   return (
     <div className="evolucao-aluno">
       <h4>Evolução do Aluno</h4>
-      <p className="descricao-grafico">Histórico de desempenho nos últimos meses</p>
-      {/* Aqui você pode usar um componente de gráfico real (Recharts, Chart.js etc),
-          ou manter esse placeholder para depois integrar */}
-      <div className="grafico-placeholder">
-        {/* placeholder grid */}
-        <div className="grid">
-          {['JAN','FEV','MAR','ABR','MAI','JUN','JUL'].map((mês, i) => (
-            <div key={i} className="grid-col">
-              <div className="linha-verde" />
-              <div className="linha-azul" />
-              <span className="label">{mês}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="legenda">
-        <span className="nota-media">Nota Média</span>
-        <span className="participacao">Participação %</span>
-      </div>
+      <ResponsiveContainer width="100%" height={250}>
+        <LineChart data={dadosEvolucao}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="mes" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="participacao" stroke="#8884d8" name="Participação (%)" />
+          {/* <Line type="monotone" dataKey="media" stroke="#82ca9d" name="Média" /> */}
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };

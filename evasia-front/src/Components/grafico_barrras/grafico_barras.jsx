@@ -45,7 +45,7 @@ const GraficoRisco = ({ quantidade }) => {
     return (
         <div style={{
             width: '100%',
-            height: 300, 
+            height: 300,
             padding: '1.5rem',
             background: '#fff',
             borderRadius: '1.25rem',

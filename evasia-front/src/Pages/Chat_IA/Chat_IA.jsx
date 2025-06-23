@@ -7,7 +7,7 @@ const respostasGerais = [
     pergunta: /evadir|evasão|evitar/i,
     resposta: "Para evitar a evasão, é importante acompanhar o engajamento dos alunos, oferecer suporte personalizado, identificar sinais de risco precocemente e promover um ambiente acolhedor e motivador."
   },
-  {
+  { 
     pergunta: /como identificar.*risco/i,
     resposta: "Você pode identificar alunos em risco analisando frequência de acesso, participação em atividades, desempenho acadêmico e cumprimento de prazos."
   },

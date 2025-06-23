@@ -9,6 +9,73 @@ import Spiner from '../../Components/Spiner/Spiner';
 import LoadingCards from '../../Components/LoadingCards/LoadingCards';
 
 
+function calcularNota(logs) {
+    if (!logs || logs.length === 0) return 0;
+    const interacoes = logs.filter(log => log.action === "viewed" && targetsValidos.includes(log.target));
+    const participacao = Math.min(100, Math.floor((interacoes.length / totalEsperado) * 100));
+    const totalLogsNorm = Math.min(logs.length, 100);
+    const interacoesNorm = Math.min(interacoes.length * 10, 100);
+    const participacaoNorm = participacao;
+    const pesoLogs = 1;
+    const pesoInteracoes = 2;
+    const pesoParticipacao = 3;
+    const somaPesos = pesoLogs + pesoInteracoes + pesoParticipacao;
+    const nota = (
+        (totalLogsNorm * pesoLogs) +
+        (interacoesNorm * pesoInteracoes) +
+        (participacaoNorm * pesoParticipacao)
+    ) / somaPesos;
+    return nota / 10; // Para ficar de 0 a 10
+}
+
+function normalizarNome(nome) {
+    return nome?.toString().trim().toLowerCase().replace(/\s+/g, '');
+}
+
+const totalEsperado = 50;
+const acoesValidas = [
+    'viewed', 'uploaded', 'submitted', 'created', 'posted', 'graded', 'attempted',
+    'completed', 'answered', 'reviewed', 'started'
+];
+const targetsValidos = [
+    'course', 'course_module', 'user', 'user_list', 'user_profile', 'grade_report',
+    'user_report', 'report', 'discussion', 'discussion_subscription', 'assessable',
+    'post', 'badge_listing', 'activity_report', 'attempt', 'attempt_preview', 'attempt_summary'
+];
+
+function calcularParticipacao(logs) {
+    if (!logs || logs.length === 0) return 0;
+    const interacoes = logs.filter(log => log.action === "viewed" && targetsValidos.includes(log.target));
+    return Math.min(100, Math.floor((interacoes.length / totalEsperado) * 100));
+}
+
+function calcularCoberturaDeModulos(logs) {
+    if (!logs || logs.length === 0) return 0;
+    const acoes = logs
+        .filter(log => acoesValidas.includes(log.action))
+        .map(log => `${normalizarNome(log.name)}|${log.component}|${log.target}`);
+    const acoesUnicas = [...new Set(acoes)];
+    const totalFeito = acoesUnicas.length;
+    return Math.min(100, Math.round((totalFeito / totalEsperado) * 100));
+}
+
+const calcularRisco = (aluno, participacao = 0, media = 10) => {
+    const hoje = new Date();
+    if (!aluno.user_lastaccess) return 'Alto risco';
+
+    const dataUltimoAcesso = new Date(aluno.user_lastaccess);
+    const diffDias = (hoje - dataUltimoAcesso) / (1000 * 60 * 60 * 24);
+
+    if (participacao < 40 && media < 6) return 'Alto risco';
+    if (participacao < 40 || media < 6) return 'Alto risco';
+
+    if (participacao >= 50 && diffDias <= 15 && media >= 6) return 'Baixo risco';
+
+    if (participacao < 60 || diffDias > 15 || media < 6.5) return 'Médio risco';
+
+    return 'Baixo risco';
+};
+
 const Dashboard = () => {
     const [usuarios, setUsuarios] = useState([]);
     const [alunosValidos, setAlunosValidos] = useState([]);
@@ -44,21 +111,6 @@ const Dashboard = () => {
             calcularEstatisticas(alunosValidos);
         }
     }, [alunosValidos]);
-
-    const calcularRisco = (user) => {
-        const hoje = new Date();
-
-        if (!user.user_lastaccess) return 'Desconhecido';
-
-        const dataUltimoAcesso = new Date(user.user_lastaccess);
-        const diffDias = (hoje - dataUltimoAcesso) / (1000 * 60 * 60 * 24);
-
-
-        console.log(`Usuário: ${user.name}, Último acesso: ${dataUltimoAcesso.toLocaleDateString()}, Dias desde último acesso: ${diffDias.toFixed(0)}`);
-
-        return diffDias > 30 ? 'Alto risco' : diffDias > 7 ? 'Médio risco' : 'Baixo risco';
-    };
-
 
     useEffect(() => {
         const buscarUsuarios = async () => {
@@ -130,14 +182,22 @@ const Dashboard = () => {
                 const resultados = await response.json();
                 console.log('Logs obtidos em lote:', resultados.length);
 
-                // Atualiza os alunos mantendo TODOS os dados originais
                 const alunosAtualizados = alunosValidos.map(aluno => {
                     const userLogs = resultados.find(r => r.userId === aluno.user_id)?.logs ?? [];
+                    const participacao = calcularParticipacao(userLogs);
+                    const cobertura = calcularCoberturaDeModulos(userLogs);
+                    const media = calcularNota(userLogs).toFixed(1);
+                    const risco = calcularRisco(aluno, participacao, parseFloat(media));
                     return {
-                        ...aluno, // Mantém todos os dados originais, incluindo o risco
-                        logs: userLogs
+                        ...aluno,
+                        logs: userLogs,
+                        participacao,
+                        cobertura,
+                        media,
+                        risco
                     };
                 });
+                setAlunosValidos(alunosAtualizados);
 
                 // Atualiza o estado com os alunos completos
                 setAlunosValidos(alunosAtualizados);
@@ -313,7 +373,7 @@ const Dashboard = () => {
 
             <div className='graficos'>
                 <GraficoAtividade data={getAcessosPorDia()} />
-                <GraficoBarras quantidade={alunosPorRisco} />
+                <GraficoBarras quantidade={estatisticas.alunosPorRisco} />
             </div>
         </div>
     );

@@ -71,56 +71,45 @@ const Alunos = () => {
         baixo: 0,
     });
 
-    const calcularRisco = (user) => {
+    const acoesValidas = [
+        'viewed', 'uploaded', 'submitted', 'created', 'posted', 'graded', 'attempted',
+        'completed', 'answered', 'reviewed', 'started'
+    ];
+
+    const calcularRisco = (aluno, participacao = 0, media = 10) => {
         const hoje = new Date();
+        if (!aluno.user_lastaccess) return 'Alto risco';
 
-        if (!user.user_lastaccess) return 'Alto risco';
-
-        const dataUltimoAcesso = new Date(user.user_lastaccess);
+        const dataUltimoAcesso = new Date(aluno.user_lastaccess);
         const diffDias = (hoje - dataUltimoAcesso) / (1000 * 60 * 60 * 24);
 
-        return diffDias > 30 ? 'Alto risco' :
-            diffDias > 7 ? 'Médio risco' :
-                'Baixo risco';
+        if (participacao < 40 && media < 6) return 'Alto risco';
+        if (participacao < 40 || media < 6) return 'Alto risco';
+
+        if (participacao >= 50 && diffDias <= 15 && media >= 6) return 'Baixo risco';
+
+        if (participacao < 60 || diffDias > 15 || media < 6.5) return 'Médio risco';
+
+        return 'Baixo risco';
     };
 
-    function calcularAtividadesPendentes(modulosTotais, logs) {
-        let pendentes = 0;
-        modulosTotais.forEach(modulo => {
-            const foiFeito = logs.some(log =>
-                log.target === 'course_module' &&
-                log.component === modulo.component &&
-                log.name === modulo.name &&
-                log.action === 'viewed'
-            );
-            if (!foiFeito) pendentes++;
-        });
-        return pendentes;
+    function normalizarNome(nome) {
+        return nome?.toString().trim().toLowerCase().replace(/\s+/g, '');
     }
 
-    function extrairModulosDeMaiorParticipante(logsUsuarios) {
-        let maior = null;
-        for (let userLogs of logsUsuarios) {
-            if (!maior || userLogs.logs.length > maior.logs.length) {
-                maior = userLogs;
-            }
-        }
-        if (!maior) return [];
+    const totalEsperado = 50;
+    function calcularCoberturaDeModulos(logs) {
+        if (!logs || logs.length === 0) return 0;
 
-        const modulos = maior.logs
-            .filter(log => log.target === 'course_module' && log.action === 'viewed')
-            .map(log => ({
-                name: log.name,
-                component: log.component
-            }));
+        // Agora considera todas as ações válidas, independente do target
+        const acoes = logs
+            .filter(log => acoesValidas.includes(log.action))
+            .map(log => `${normalizarNome(log.name)}|${log.component}|${log.target}`);
 
-        const modulosUnicos = modulos.filter((mod, index, self) =>
-            index === self.findIndex(m =>
-                m.name === mod.name && m.component === mod.component
-            )
-        );
+        const acoesUnicas = [...new Set(acoes)];
+        const totalFeito = acoesUnicas.length;
 
-        return modulosUnicos;
+        return Math.min(100, Math.round((totalFeito / totalEsperado) * 100));
     }
 
     useEffect(() => {
@@ -143,6 +132,7 @@ const Alunos = () => {
 
                 const alunosComRisco = alunosFiltrados.map(user => {
                     const riscoCompleto = calcularRisco(user);
+
                     const risco = riscoCompleto.includes('Alto') ? 'Alto' :
                         riscoCompleto.includes('Médio') ? 'Médio' :
                             riscoCompleto.includes('Baixo') ? 'Baixo' : 'Desconhecido';
@@ -176,11 +166,9 @@ const Alunos = () => {
     useEffect(() => {
         const totalEsperado = 50;
         const targetsValidos = [
-            "course",
-            "user_list",
-            "user_profile",
-            "grade_report",
-            "user_report"
+            'course', 'course_module', 'user', 'user_list', 'user_profile', 'grade_report',
+            'user_report', 'report', 'discussion', 'discussion_subscription', 'assessable',
+            'post', 'badge_listing', 'activity_report', 'attempt', 'attempt_preview', 'attempt_summary'
         ];
 
         const filtrarInteracoesValidas = (logs) => {
@@ -227,14 +215,13 @@ const Alunos = () => {
 
                 setLogs(resultados);
 
-                const modulosEsperados = extrairModulosDeMaiorParticipante(resultados);
                 let somaNotas = 0;
 
                 const novosAlunos = alunosValidos.map(aluno => {
                     const logs = resultados.find(r => r.userId === aluno.user_id)?.logs ?? [];
                     const interacoes = filtrarInteracoesValidas(logs);
                     const participacao = calcularParticipacao(interacoes);
-
+                    const risco = calcularRisco(aluno, participacao, parseFloat(aluno.media));
                     const totalLogsNorm = Math.min(logs.length, 100);
                     const interacoesNorm = Math.min(interacoes.length * 10, 100);
                     const participacaoNorm = participacao;
@@ -250,21 +237,18 @@ const Alunos = () => {
                         (participacaoNorm * pesoParticipacao)
                     ) / somaPesos;
 
-                    const pendentes = calcularAtividadesPendentes(modulosEsperados, logs);
+                    const cobertura = calcularCoberturaDeModulos(logs);
+                    const pendentes = 100 - cobertura;
+
 
                     somaNotas += nota;
-
-                    const riscoCompleto = calcularRisco(aluno);
-                    const risco = riscoCompleto.includes('Alto') ? 'Alto risco' :
-                        riscoCompleto.includes('Médio') ? 'Médio risco' :
-                            riscoCompleto.includes('Baixo') ? 'Baixo risco' :
-                                'Desconhecido';
 
                     return {
                         ...aluno,
                         participacao,
-                        media: nota.toFixed(1),
+                        media: (participacao / 10).toFixed(1),
                         pendentes,
+                        cobertura,
                         ultimosAcessos: interacoes.map(i => i.date),
                         risco
                     };
@@ -286,7 +270,6 @@ const Alunos = () => {
 
             } catch (err) {
                 console.error('Erro ao buscar logs:', err);
-                // Limpa loading state em caso de erro
                 const errorLoadingState = {};
                 alunosValidos.forEach(aluno => {
                     errorLoadingState[aluno.user_id] = false;
@@ -492,7 +475,7 @@ const Alunos = () => {
                         <th>Último acesso</th>
                         <th>Participação</th>
                         <th>Média</th>
-                        <th>Pendentes</th>
+                        <th>Progresso no moodle</th>
                         <th>Risco</th>
                         <th>Ações</th>
                     </tr>
@@ -533,7 +516,7 @@ const Alunos = () => {
                             </td>
                             <td style={{ textAlign: 'center' }}>
                                 <ContentOrPlaceholder isLoading={loadingItems[aluno.user_id]}>
-                                    <span className="pendingBadge">{aluno.pendentes}</span>
+                                    <span className="pendingBadge">{aluno.cobertura}%</span>
                                 </ContentOrPlaceholder>
                             </td>
                             <td>
