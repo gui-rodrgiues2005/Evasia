@@ -1,13 +1,24 @@
+$primary-color: #1A237E;
+$secondary-color: #1976D2;
+$success-color: #388E3C;
+$warning-color: #FBC02D;
+$danger-color: #C62828;
+$background-color: #F5F6FA;
+$text-color: #23272F;
+$text-light: #6B7280;
+$border-color: #E0E3E7;
+$white: #fff;
+
 .ultimo-acesso {
-  background: #1e1f26;
-  border: 1px solid #2a2b33;
+  background: $background-color;
+  border: 1px solid $border-color;
   border-radius: 8px;
   padding: 1.25rem;
   margin-top: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(26,35,126,0.08);
 
   h4 {
-    color: #e0e1e9;
+    color: $primary-color;
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
@@ -22,19 +33,19 @@
   }
 
   p {
-    color: #bdbecb;
+    color: $text-color;
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;
     padding: 0.5rem 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba($primary-color, 0.04);
     border-radius: 4px;
-    border-left: 3px solid #4a6fa5;
+    border-left: 3px solid $secondary-color;
   }
 
   // Destaque para mensagens importantes
   .alerta {
-    color: #f39c12;
+    color: $warning-color;
     font-weight: 500;
   }
 }

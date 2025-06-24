@@ -1,22 +1,78 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
+import Json from '../../utils/respostasGerais.json';
 import './Chat_IA.scss';
 
-const respostasGerais = [
-  {
-    pergunta: /evadir|evasão|evitar/i,
-    resposta: "Para evitar a evasão, é importante acompanhar o engajamento dos alunos, oferecer suporte personalizado, identificar sinais de risco precocemente e promover um ambiente acolhedor e motivador."
-  },
-  { 
-    pergunta: /como identificar.*risco/i,
-    resposta: "Você pode identificar alunos em risco analisando frequência de acesso, participação em atividades, desempenho acadêmico e cumprimento de prazos."
-  },
-  {
-    pergunta: /estratégia|estratégias/i,
-    resposta: "Algumas estratégias incluem contato proativo, tutoria personalizada, feedback constante e incentivo à participação em fóruns e atividades."
-  }
-  // Adicione mais padrões conforme desejar
+const respostasGerais = Json.map(item => ({
+  pergunta: new RegExp(item.pergunta, 'i'),
+  resposta: item.resposta
+}));
+
+const totalEsperado = 50;
+const acoesValidas = [
+  'viewed', 'uploaded', 'submitted', 'created', 'posted', 'graded', 'attempted',
+  'completed', 'answered', 'reviewed', 'started'
 ];
+const targetsValidos = [
+  'course', 'course_module', 'user', 'user_list', 'user_profile', 'grade_report',
+  'user_report', 'report', 'discussion', 'discussion_subscription', 'assessable',
+  'post', 'badge_listing', 'activity_report', 'attempt', 'attempt_preview', 'attempt_summary'
+];
+
+function normalizarNome(nome) {
+  return nome?.toString().trim().toLowerCase().replace(/\s+/g, '');
+}
+
+function calcularParticipacao(logs) {
+  if (!logs || logs.length === 0) return 0;
+  const interacoes = logs.filter(log => log.action === "viewed" && targetsValidos.includes(log.target));
+  return Math.min(100, Math.floor((interacoes.length / totalEsperado) * 100));
+}
+
+function calcularCoberturaDeModulos(logs) {
+  if (!logs || logs.length === 0) return 0;
+  const acoes = logs
+    .filter(log => acoesValidas.includes(log.action))
+    .map(log => `${normalizarNome(log.name)}|${log.component}|${log.target}`);
+  const acoesUnicas = [...new Set(acoes)];
+  const totalFeito = acoesUnicas.length;
+  return Math.min(100, Math.round((totalFeito / totalEsperado) * 100));
+}
+
+function calcularNota(logs) {
+  if (!logs || logs.length === 0) return 0;
+  const interacoes = logs.filter(log => log.action === "viewed" && targetsValidos.includes(log.target));
+  const participacao = Math.min(100, Math.floor((interacoes.length / totalEsperado) * 100));
+  const totalLogsNorm = Math.min(logs.length, 100);
+  const interacoesNorm = Math.min(interacoes.length * 10, 100);
+  const participacaoNorm = participacao;
+  const pesoLogs = 1;
+  const pesoInteracoes = 2;
+  const pesoParticipacao = 3;
+  const somaPesos = pesoLogs + pesoInteracoes + pesoParticipacao;
+  const nota = (
+    (totalLogsNorm * pesoLogs) +
+    (interacoesNorm * pesoInteracoes) +
+    (participacaoNorm * pesoParticipacao)
+  ) / somaPesos;
+  return nota / 10; // Para ficar de 0 a 10
+}
+
+function calcularRisco(aluno, participacao = 0, media = 10, diasDesdeUltimoAcesso = 0) {
+  if (diasDesdeUltimoAcesso > 7) return 'ALTO';
+  if (participacao < 40 && media < 6) return 'ALTO';
+  if (participacao < 40 || media < 6) return 'ALTO';
+  if (participacao >= 50 && diasDesdeUltimoAcesso <= 3 && media >= 6) return 'BAIXO';
+  if (participacao < 60 || diasDesdeUltimoAcesso > 3 || media < 6.5) return 'MÉDIO';
+  return 'BAIXO';
+}
+
+const prioridadeTraduzida = {
+  urgent: "urgente",
+  moderate: "moderada",
+  low: "baixa",
+  routine: "rotineira"
+};
 
 const ChatIA = () => {
   const { user_id } = useParams();
@@ -59,7 +115,7 @@ const ChatIA = () => {
     // eslint-disable-next-line
   }, [user_id]);
 
-  // Função para buscar e analisar aluno pelo nome (igual à tela de alunos)
+  // Função para buscar e analisar aluno pelo nome (usando as novas lógicas)
   const buscarAnalisePorNome = async (nomeAluno) => {
     setLoading(true);
     setChat(prev => [
@@ -92,43 +148,37 @@ const ChatIA = () => {
       const resultados = await logsRes.json();
       const logs = resultados.find(r => r.userId === aluno.user_id)?.logs ?? [];
 
-      // Monta dados para IA (igual tela de alunos)
-      const user_id = aluno.user_id;
-      const student_name = aluno.name;
-      const course_info = aluno.curso || "Curso desconhecido";
+      // Cálculos reais
+      const participacao = calcularParticipacao(logs);
+      const media = calcularNota(logs);
+      const cobertura = calcularCoberturaDeModulos(logs);
+      const pendentes = 0; // Ajuste se tiver lógica para atividades pendentes
+
       const ultimoAcesso = aluno.user_lastaccess ? new Date(aluno.user_lastaccess) : new Date();
       const diasDesdeUltimoAcesso = Math.floor((Date.now() - ultimoAcesso.getTime()) / (1000 * 60 * 60 * 24));
-      const acessouUltimos7Dias = logs.some(log => {
-        const logDate = new Date(log.date);
-        return (Date.now() - logDate.getTime()) / (1000 * 60 * 60 * 24) <= 7;
-      });
-      const access_frequency = acessouUltimos7Dias ? "regular" : "irregular";
+      let access_frequency = "regular";
+      if (diasDesdeUltimoAcesso > 7) access_frequency = "raro";
+      else if (diasDesdeUltimoAcesso > 3) access_frequency = "irregular";
 
-      // Simulação de cálculo de participação, média e pendentes
-      const participacao = 80; // valor fictício, ajuste conforme sua lógica
-      const media = 7.5; // valor fictício, ajuste conforme sua lógica
-      const pendentes = 0; // valor fictício, ajuste conforme sua lógica
-
-      // Simulação de risco
-      let risco = 'Baixo risco';
-      if (diasDesdeUltimoAcesso > 30) risco = 'Alto risco';
-      else if (diasDesdeUltimoAcesso > 7) risco = 'Médio risco';
+      const risco = calcularRisco(aluno, participacao, media, diasDesdeUltimoAcesso);
 
       const riskFactors = [];
-      if (access_frequency === "irregular") riskFactors.push("acessos irregulares");
+      if (access_frequency !== "regular") riskFactors.push("acessos irregulares");
       if (media < 6) riskFactors.push("nota abaixo da média");
+      if (participacao < 40) riskFactors.push("baixa participação");
       if (pendentes > 0) riskFactors.push("atividades pendentes");
 
       const protectiveFactors = [];
       if (participacao > 70) protectiveFactors.push("participação ativa");
       if (media >= 7) protectiveFactors.push("boas notas");
+      if (cobertura > 60) protectiveFactors.push("bom progresso no curso");
 
-      let immediate = [], followUp = [], priority = "low";
-      if (risco === "Alto risco") {
+      let immediate = [], followUp = [], priority = "routine";
+      if (risco === "ALTO") {
         immediate = ["contatar aluno via e-mail", "agendar tutoria"];
         followUp = ["monitorar acessos próximos 7 dias"];
-        priority = "high";
-      } else if (risco === "Médio risco") {
+        priority = "urgent";
+      } else if (risco === "MÉDIO") {
         immediate = ["enviar lembrete de atividades"];
         followUp = ["avaliar progresso em 1 semana"];
         priority = "moderate";
@@ -137,18 +187,18 @@ const ChatIA = () => {
       const risk_score = Math.round((100 - diasDesdeUltimoAcesso) * 0.3 + participacao * 0.3 + media * 10 * 0.4);
 
       const dadosParaIA = {
-        user_id,
-        student_name,
-        course_info,
+        user_id: aluno.user_id,
+        student_name: aluno.name,
+        course_info: aluno.curso || "Curso desconhecido",
         last_access_analysis: {
           last_access_date: ultimoAcesso.toISOString(),
           days_since_access: diasDesdeUltimoAcesso,
           access_frequency
         },
         academic_status: {
-          course_progress: "45%",
-          current_grades: media,
-          assignments_status: pendentes > 0 ? "pendentes" : "em dia"
+          course_progress: `${cobertura}%`,
+          current_grades: media.toFixed(1),
+          assignments_status: pendentes > 0 ? "atrasado" : "em dia"
         },
         risk_assessment: {
           risk_level: risco,
@@ -164,17 +214,17 @@ const ChatIA = () => {
         },
         analysis_metadata: {
           analyzed_at: new Date().toISOString(),
-          data_source: "Chat IA",
-          analyst: "Sistema Interno"
+          data_source: "UNIFENAS API",
+          analyst: "AI Sistema Detecção Evasão"
         }
       };
 
-      // Envia para IA
       const response = await fetch("http://localhost:5164/api/Alerts/receive-ai-response", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(JSON.stringify(dadosParaIA))
       });
+
 
       if (response.headers.get("content-length") !== "0") {
         const result = await response.json();
@@ -226,8 +276,11 @@ const ChatIA = () => {
       return;
     }
 
-    // 2. Tenta buscar aluno pelo nome (se for uma frase curta, assume que é nome)
-    if (mensagem.split(' ').length >= 2 && mensagem.length > 6) {
+    if (
+      mensagem.split(' ').length >= 2 &&
+      mensagem.length > 6 &&
+      !mensagem.trim().endsWith('?')
+    ) {
       await buscarAnalisePorNome(mensagem);
       setSending(false);
       return;
@@ -244,9 +297,9 @@ const ChatIA = () => {
   };
 
   const riscoColor = {
-    'Alto risco': 'alto',
-    'Médio risco': 'medio',
-    'Baixo risco': 'baixo'
+    'ALTO': 'alto',
+    'MÉDIO': 'medio',
+    'BAIXO': 'baixo'
   };
 
   return (
@@ -287,15 +340,20 @@ const ChatIA = () => {
                 <div className="chatia-col">
                   <h3 className="chatia-section-title">Fatores de risco</h3>
                   <ul className="chatia-list">
-                    {(aiResponse.risk_assessment?.primary_risk_factors || []).map((f, i) => (
-                      <li key={i} className="chatia-risk">{f}</li>
-                    ))}
+                    {(aiResponse.risk_assessment?.primary_risk_factors || []).length > 0
+                      ? aiResponse.risk_assessment.primary_risk_factors.map((f, i) => (
+                        <li key={i} className="chatia-risk">{f}</li>
+                      ))
+                      : <li className="chatia-risk">Nenhum fator de risco identificado.</li>
+                    }
                   </ul>
                   <h3 className="chatia-section-title">Fatores protetivos</h3>
                   <ul className="chatia-list">
                     {(aiResponse.risk_assessment?.protective_factors || []).map((f, i) => (
                       <li key={i} className="chatia-protect">{f}</li>
-                    ))}
+                    ))
+                      .length === 0 && <li className="chatia-protect">Nenhum fator protetivo identificado.</li>
+                    }
                   </ul>
                 </div>
                 <div className="chatia-col">
@@ -303,7 +361,10 @@ const ChatIA = () => {
                   <ul className="chatia-list">
                     <li><strong>Ações imediatas:</strong> {(aiResponse.recommendations?.immediate_actions || []).join(', ')}</li>
                     <li><strong>Acompanhamento:</strong> {(aiResponse.recommendations?.follow_up_actions || []).join(', ')}</li>
-                    <li><strong>Prioridade de contato:</strong> {aiResponse.recommendations?.contact_priority}</li>
+                    <li>
+                      <strong>Prioridade de contato:</strong>{" "}
+                      {prioridadeTraduzida[(aiResponse.recommendations?.contact_priority || '').toLowerCase()] || aiResponse.recommendations?.contact_priority || 'Não informado'}
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -358,6 +419,5 @@ const ChatIA = () => {
       </div>
     </div>
   );
-};
-
+}
 export default ChatIA;

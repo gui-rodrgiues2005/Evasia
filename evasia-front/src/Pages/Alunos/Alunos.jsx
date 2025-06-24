@@ -116,13 +116,21 @@ const Alunos = () => {
         fetch('http://localhost:5164/api/User')
             .then(response => response.json())
             .then(data => {
-                const alunosFiltrados = data.filter(u => {
+                const alunosValidos = data.filter(u => {
                     const nome = u.name?.trim();
                     const partesNome = nome?.split(/\s+/) || [];
                     const nomeValido = partesNome.length >= 3;
                     const soLetras = partesNome.every(parte => /^[A-Za-zÀ-ÿ]+$/.test(parte));
-                    return nomeValido && soLetras && !u.user_id.startsWith('USER_');
+                    return nomeValido && soLetras && !u.user_id?.startsWith('USER_');
                 });
+
+                const alunosFiltrados = alunosValidos
+                    .filter(aluno => {
+                        const matchBusca = aluno.name.toLowerCase().includes(busca.toLowerCase());
+                        const matchFiltro = filtro === 'Todos' || aluno.risco === filtro;
+                        return matchBusca && matchFiltro;
+                    })
+                    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR', { sensitivity: 'base' }));
 
                 const alunosCompletos = alunosFiltrados.map(aluno => ({
                     ...aluno,
@@ -395,7 +403,7 @@ const Alunos = () => {
             analysis_metadata: {
                 analyzed_at: new Date().toISOString(),
                 data_source: "Tela de alunos",
-                analyst: "Sistema Interno"
+                analyst: "AI Sistema Detecção Evasão"
             }
         };
 
@@ -477,6 +485,7 @@ const Alunos = () => {
                         <th>Média</th>
                         <th>Progresso no moodle</th>
                         <th>Risco</th>
+                        <th>Analíse detalhada</th>
                         <th>Ações</th>
                     </tr>
                 </thead>

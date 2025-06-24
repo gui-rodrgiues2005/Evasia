@@ -332,48 +332,69 @@ const Dashboard = () => {
         }));
     };
 
+    const loading = loadingUsuarios || loadingLogs;
+
     return (
         <div className='dashboard-section'>
             <h2 className='title-section'>Dashboard</h2>
 
             <div className='Cards'>
-                <Cards
-                    title="Total de Alunos"
-                    quantidade={estatisticas.totalAlunos}
-                    icon={faUserGraduate}
-                    porcentagem="+12%"
-                    informacao=" do semestre anterior"
-                    loading={loadingUsuarios || loadingLogs}
-                />
-                <Cards
-                    title="Alunos em risco"
-                    quantidade={estatisticas.alunosRisco}
-                    icon={faExclamationTriangle}
-                    porcentagem={`${((estatisticas.alunosRisco / estatisticas.totalAlunos) * 100).toFixed(0)}%`}
-                    informacao=" dos alunos ativos"
-                    loading={loadingUsuarios || loadingLogs}
-                />
-                <Cards
-                    title="Taxa de Engajamento"
-                    quantidade={`${estatisticas.mediaEngajamento}`}
-                    icon={faChartLine}
-                    porcentagem="+4%"
-                    informacao=" usuários ativos nos últimos 7 dias"
-                    loading={loadingUsuarios || loadingLogs}
-                />
-                <Cards
-                    title="Média de Notas"
-                    quantidade={estatisticas.mediaNotas}
-                    icon={faStar}
-                    porcentagem="+3%"
-                    informacao=" no semestre atual"
-                    loading={loadingUsuarios || loadingLogs}
-                />
+                {loading ? (
+                    <>
+                        <div className="card-skeleton">
+                            <div className="skeleton skeleton-title" />
+                            <div className="skeleton skeleton-value" />
+                            <div className="skeleton skeleton-sub" />
+                        </div>
+                        <div className="card-skeleton">
+                            <div className="skeleton skeleton-title" />
+                            <div className="skeleton skeleton-value" />
+                            <div className="skeleton skeleton-sub" />
+                        </div>
+                        <div className="card-skeleton">
+                            <div className="skeleton skeleton-title" />
+                            <div className="skeleton skeleton-value" />
+                            <div className="skeleton skeleton-sub" />
+                        </div>
+                        <div className="card-skeleton">
+                            <div className="skeleton skeleton-title" />
+                            <div className="skeleton skeleton-value" />
+                            <div className="skeleton skeleton-sub" />
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <Cards
+                            title="Total de Alunos"
+                            quantidade={estatisticas.totalAlunos}
+                            icon={faUserGraduate}
+                            informacao="no curso"
+                        />
+                        <Cards
+                            title="Alunos em risco"
+                            quantidade={estatisticas.alunosRisco}
+                            icon={faExclamationTriangle}
+                            informacao="em risco de evasão"
+                        />
+                        <Cards
+                            title="Taxa de Engajamento"
+                            quantidade={`${estatisticas.mediaEngajamento}%`}
+                            icon={faChartLine}
+                            informacao="engajamento médio"
+                        />
+                        <Cards
+                            title="Média de Notas"
+                            quantidade={estatisticas.mediaNotas}
+                            icon={faStar}
+                            informacao="desempenho geral"
+                        />
+                    </>
+                )}
             </div>
 
             <div className='graficos'>
-                <GraficoAtividade data={getAcessosPorDia()} />
-                <GraficoBarras quantidade={estatisticas.alunosPorRisco} />
+                <GraficoAtividade data={getAcessosPorDia()} loading={loading} />
+                <GraficoBarras quantidade={estatisticas.alunosPorRisco} loading={loading} />
             </div>
         </div>
     );

@@ -1,14 +1,14 @@
-// Variáveis de cores
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$danger-color: #e74c3c;
-$warning-color: #f39c12;
-$success-color: #27ae60;
-$light-color: #ecf0f1;
-$dark-color: #2c3e50;
-$border-color: #dfe6e9;
-$text-color: #34495e;
-$text-light: #7f8c8d;
+// Paleta única e profissional
+$primary-color: #1A237E;
+$secondary-color: #1976D2;
+$success-color: #388E3C;
+$warning-color: #FBC02D;
+$danger-color: #C62828;
+$background-color: #F5F6FA;
+$text-color: #23272F;
+$text-light: #6B7280;
+$border-color: #E0E3E7;
+$white: #fff;
 
 // Mixins
 @mixin card-shadow {
@@ -31,6 +31,7 @@ $text-light: #7f8c8d;
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -41,6 +42,7 @@ $text-light: #7f8c8d;
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -49,15 +51,16 @@ $text-light: #7f8c8d;
 
 // Estilos principais
 .relatoriosContainer {
-  width: 100%;  padding: 2rem;
+  width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: $text-color;
+  background: $background-color;
   max-width: 1600px;
   margin: 0 auto;
   animation: fadeIn 0.5s ease-out;
 
   h2 {
-    color: $dark-color;
+    color: $primary-color;
     margin-bottom: 1.5rem;
     font-weight: 600;
     font-size: 1.8rem;
@@ -84,7 +87,7 @@ $text-light: #7f8c8d;
 }
 
 .metricCard {
-  background: white;
+  background: $white;
   border-radius: 10px;
   padding: 1.5rem;
   @include card-shadow;
@@ -95,7 +98,7 @@ $text-light: #7f8c8d;
   &.loading {
     min-height: 100px;
     @include loading-skeleton;
-    
+
     * {
       visibility: hidden;
     }
@@ -126,7 +129,7 @@ $text-light: #7f8c8d;
     font-size: 2rem;
     font-weight: 700;
     margin: 0.5rem 0;
-    color: $dark-color;
+    color: $primary-color;
   }
 
   .metricSubtext {
@@ -152,10 +155,19 @@ $text-light: #7f8c8d;
   }
 }
 
+.metricCard {
+  transition: all 0.3s ease;
+
+  &.loaded {
+    animation: fadeIn 0.5s ease-in;
+  }
+}
+
+
 // Botão principal
 .generateButton {
   background: $secondary-color;
-  color: white;
+  color: $white;
   border: none;
   padding: 0.8rem 1.5rem;
   font-weight: 600;
@@ -198,8 +210,8 @@ $text-light: #7f8c8d;
 
 // Sidebar
 .sidebarclass {
-  width: 280px;
-  background: white;
+  width: 240px;
+  background: $white;
   border-radius: 10px;
   @include card-shadow;
   padding: 1.5rem;
@@ -212,7 +224,7 @@ $text-light: #7f8c8d;
 }
 
 .searchInput {
-  width: 90%;
+  width: 60%;
   padding: 0.8rem 1rem;
   margin-bottom: 1.5rem;
   border: 1px solid $border-color;
@@ -234,14 +246,14 @@ $text-light: #7f8c8d;
   max-height: 70vh;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: $primary-color $light-color;
+  scrollbar-color: $primary-color $background-color;
 
   &::-webkit-scrollbar {
     width: 6px;
   }
 
   &::-webkit-scrollbar-track {
-    background: $light-color;
+    background: $background-color;
     border-radius: 3px;
   }
 
@@ -254,7 +266,7 @@ $text-light: #7f8c8d;
 .reportItem {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 0.5rem;
@@ -293,14 +305,21 @@ $text-light: #7f8c8d;
 // Área de detalhes
 .detailArea {
   flex: 1;
-  background: white;
+  background: $white;
   border-radius: 10px;
   @include card-shadow;
-  padding: 2rem;
+  padding: 1rem;
   animation: fadeIn 0.3s ease-out;
+  min-width: 0; // ESSENCIAL para flexbox não estourar o container
 
-  @media (max-width: 768px) {
-    padding: 1.5rem;
+  // Torna a tabela rolável horizontalmente se necessário
+  .studentsTable {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 8px;
+    background: $white;
   }
 }
 
@@ -315,7 +334,7 @@ $text-light: #7f8c8d;
   h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $dark-color;
+    color: $primary-color;
     margin: 0;
   }
 }
@@ -327,7 +346,7 @@ $text-light: #7f8c8d;
 
   button {
     background: $primary-color;
-    color: white;
+    color: $white;
     border: none;
     padding: 0.7rem 1.3rem;
     font-weight: 600;
@@ -357,7 +376,7 @@ $text-light: #7f8c8d;
   width: 100%;
   max-width: 400px;
   margin: 0 auto 2rem;
-  background: white;
+  background: $white;
   padding: 1rem;
   border-radius: 8px;
   @include card-shadow;
@@ -373,7 +392,7 @@ $text-light: #7f8c8d;
   thead {
     th {
       background: $primary-color;
-      color: white;
+      color: $white;
       padding: 1rem;
       font-weight: 600;
       text-align: left;
@@ -395,7 +414,7 @@ $text-light: #7f8c8d;
       transition: background 0.2s;
 
       &:nth-child(even) {
-        background: rgba($light-color, 0.5);
+        background: rgba($background-color, 0.5);
       }
 
       &:hover {
@@ -406,6 +425,7 @@ $text-light: #7f8c8d;
         padding: 1rem;
         border-bottom: 1px solid $border-color;
         vertical-align: middle;
+        text-align: center;
       }
     }
   }
@@ -488,4 +508,27 @@ $text-light: #7f8c8d;
     overflow-x: auto;
     white-space: nowrap;
   }
+}
+
+.skeleton {
+  @include loading-skeleton;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 18px;
+}
+
+.skeleton-value {
+  width: 40%;
+  height: 32px;
+  margin: 12px 0;
+}
+
+.skeleton-sub {
+  width: 50%;
+  height: 14px;
 }

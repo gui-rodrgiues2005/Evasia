@@ -1,0 +1,4002 @@
+[
+  {
+    "pergunta": "evadir|evas(ã|a)o|desist(ê|e)ncia|abandono",
+    "resposta": "A evasão escolar pode ser prevenida com ações proativas como monitoramento frequente, tutorias personalizadas, contato individualizado e intervenções pedagógicas baseadas em dados reais."
+  },
+  {
+    "pergunta": "^(ol[áa]|oi|e[ai]|o[pa]|bom dia|boa tarde|boa noite)",
+    "resposta": "Olá! 👋 Estou aqui para ajudar você a entender melhor sobre o risco de evasão dos alunos. Me pergunte algo como: 'Qual o risco do aluno?', 'Como evitar a evasão?' ou digite o nome de um aluno para análise detalhada."
+  },
+  {
+    "pergunta": "como identificar.*risco|sinais.*evas(ã|a)o",
+    "resposta": "Identificar risco envolve analisar a frequência de acesso, notas atuais, atrasos em atividades, participação em fóruns e interações no ambiente virtual. Quanto mais fatores de risco combinados, maior a probabilidade de evasão."
+  },
+  {
+    "pergunta": "estrat(é|e)gias|como evitar|como reduzir",
+    "resposta": "Algumas estratégias eficazes são: envio de lembretes automatizados, planos de estudo personalizados, tutoria ativa, gamificação e criação de vínculos entre alunos e tutores."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(o que).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(como).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(porque).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "acesso.*(qual).*",
+    "resposta": "O acesso regular à plataforma é fundamental para acompanhar o progresso e reduzir o risco de evasão."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(porque).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(qual).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(o que).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "pendências.*(como).*",
+    "resposta": "Pendências em atividades indicam que o aluno pode estar enfrentando dificuldades. É importante oferecer suporte."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(como).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(porque).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(qual).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "notas.*(o que).*",
+    "resposta": "Notas baixas são um forte indicativo de risco. Incentivar o estudo e oferecer reforço pode ajudar."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(como).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(o que).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(porque).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "participação.*(qual).*",
+    "resposta": "Participação ativa nas aulas e fóruns é um fator protetivo contra a evasão."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(o que).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(qual).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(porque).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "motivação.*(como).*",
+    "resposta": "A motivação dos alunos pode ser reforçada com reconhecimento, apoio emocional e desafios significativos."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(o que).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(porque).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(qual).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "feedback.*(como).*",
+    "resposta": "Fornecer feedback frequente é uma das melhores formas de manter os alunos engajados."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(como).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(qual).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(o que).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "tutoria.*(porque).*",
+    "resposta": "Tutorias regulares ajudam a manter os alunos no caminho certo e esclarecem dúvidas que podem gerar abandono."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(porque).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(como).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(o que).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "IA.*(qual).*",
+    "resposta": "A IA ajuda analisando dados dos alunos e apontando quem está em risco com recomendações personalizadas."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(porque).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(como).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(o que).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "progresso.*(qual).*",
+    "resposta": "O progresso no curso indica o quanto o aluno já avançou. Manter um bom ritmo reduz o risco de evasão."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(qual).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(como).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(porque).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  },
+  {
+    "pergunta": "relatórios.*(o que).*",
+    "resposta": "Relatórios gerados pela IA ajudam os tutores a tomarem decisões baseadas em dados reais."
+  }
+]

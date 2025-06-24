@@ -342,142 +342,172 @@ const Relatorios = () => {
     return children;
   };
 
-  const irParaPerfil = (aluno) => {
-    navigate(`/perfil-aluno/${aluno.user_id}`, { state: { aluno } });
-  };
-
+  const loading = loadingUsuarios || loadingLogs;
   return (
     <div className="relatoriosContainer">
       <h2 style={{ marginBottom: '16px' }}>Relatórios de Evasão</h2>
 
       <div className="metricsContainer">
-        <div className="metricCard">
-          <strong>Total de Alunos</strong>
-          <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{estatisticas.totalAlunos}</p>
-          <small>Ativos no sistema</small>
-        </div>
-        <div className="metricCard">
-          <strong>Alunos em Risco</strong>
-          <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{estatisticas.alunosRisco}</p>
-          <small>Alto + Médio Risco</small>
-        </div>
-        <div className="metricCard">
-          <strong>Média de Participação</strong>
-          <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{estatisticas.mediaEngajamento}%</p>
-          <small>Últimos 30 dias</small>
-        </div>
-        <div className="metricCard">
-          <strong>Média Geral</strong>
-          <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{selecionado?.estatisticas?.mediaNotas || 'N/A'}</p>
-          <small>Desempenho acadêmico</small>
-        </div>
-      </div>
-
-      <div style={{ marginBottom: '16px' }}>
-        <button
-          onClick={handleGerarRelatorio}
-          disabled={isGenerating}
-          className={`generateButton ${isGenerating ? 'disabled' : ''}`}
-        >
-          {isGenerating ? 'Gerando...' : 'Gerar Novo Relatório'}
-        </button>
-      </div>
-
-      <div className="layoutContainer">
-        <div className="sidebarclass">
-          <input
-            type="text"
-            placeholder="Buscar relatórios..."
-            value={busca}
-            onChange={e => setBusca(e.target.value)}
-            className="searchInput"
-          />
-          <ul className="reportsList">
-            {relsFiltrados.map(r => (
-              <li
-                key={r.id}
-                onClick={() => setSelecionado(r)}
-                className={`reportItem ${selecionado?.id === r.id ? 'selected' : ''}`}
-              >
-                <span className="reportIcon">{r.icone}</span>
-                <div className="reportInfo">
-                  <div className="reportTitle">{r.titulo}</div>
-                  <small className="reportDate">{r.data}</small>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="detailArea" id="relatorio-detalhado">
-          {selecionado ? (
+        <div className={`metricCard${loading ? ' loading' : ''}`}>
+          {loading ? (
             <>
-              <h3 style={{ marginTop: 0 }}>{selecionado.titulo}</h3>
-
-              {/* Botões de exportação */}
-              <div className="exportButtons">
-                <button
-                  onClick={exportarExcel}
-                  className="excelButton"
-                >
-                  Exportar Excel
-                </button>
-              </div>
-
-              {/* Gráfico de distribuição */}
-              <GraficoDistribuicao data={selecionado.estatisticas} />
-
-              {/* Tabela de alunos */}
-              <table className="studentsTable">
-                <thead>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Curso</th>
-                    <th>Nível de Risco</th>
-                    <th>Participação</th>
-                    <th>Média</th>
-                    <th>Progresso no moodle</th>
-                    <th>Último Acesso</th>
-                    <th>Ações</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {selecionado.dados.map((aluno, i) => (
-                    <tr key={i} className="tableRow">
-                      <td className="tableCell">{aluno.nome}</td>
-                      <td className="tableCell">{aluno.curso}</td>
-                      <td className="tableCell">
-                        <span className={`riskBadge ${String(aluno.nivelRisco).includes('Alto') ? 'high' :
-                          String(aluno.nivelRisco).includes('Médio') ? 'medium' :
-                            String(aluno.nivelRisco).includes('Baixo') ? 'low' : 'unknown'
-                          }`}>
-                          {aluno.nivelRisco || 'Desconhecido'}
-                        </span>
-                      </td>
-                      <td className="tableCell">{aluno.participacao}%</td>
-                      <td className="tableCell">{aluno.media}</td>
-                      <td className="tableCell">{aluno.cobertura}%</td>
-                      <td className="tableCell">{aluno.ultimoAcesso ? new Date(aluno.ultimoAcesso).toLocaleDateString() : ''}</td>
-                      <td>
-                        <ContentOrPlaceholder isLoading={[aluno.user_id]}>
-                          <button
-                            className="profileButton"
-                            onClick={() => irParaPerfil(aluno)}
-                          >
-                            Ver Perfil
-                          </button>
-                        </ContentOrPlaceholder>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="skeleton skeleton-title" />
+              <div className="skeleton skeleton-value" />
+              <div className="skeleton skeleton-sub" />
             </>
           ) : (
-            <p>Selecione um relatório na lateral para visualizar os dados.</p>
+            <>
+              <strong>Total de Alunos</strong>
+              <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{estatisticas.totalAlunos}</p>
+              <small>Ativos no sistema</small>
+            </>
+          )}
+        </div>
+        <div className={`metricCard${loading ? ' loading' : ''}`}>
+          {loading ? (
+            <>
+              <div className="skeleton skeleton-title" />
+              <div className="skeleton skeleton-value" />
+              <div className="skeleton skeleton-sub" />
+            </>
+          ) : (
+            <>
+              <strong>Alunos em Risco</strong>
+              <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{estatisticas.alunosRisco}</p>
+              <small>Alto + Médio Risco</small>
+            </>
+          )}
+        </div>
+        <div className={`metricCard${loading ? ' loading' : ''}`}>
+          {loading ? (
+            <>
+              <div className="skeleton skeleton-title" />
+              <div className="skeleton skeleton-value" />
+              <div className="skeleton skeleton-sub" />
+            </>
+          ) : (
+            <>
+              <strong>Média de Participação</strong>
+              <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{estatisticas.mediaEngajamento}%</p>
+              <small>Últimos 30 dias</small>
+            </>
+          )}
+        </div>
+        <div className={`metricCard${loading ? ' loading' : ''}`}>
+          {loading ? (
+            <>
+              <div className="skeleton skeleton-title" />
+              <div className="skeleton skeleton-value" />
+              <div className="skeleton skeleton-sub" />
+            </>
+          ) : (
+            <>
+              <strong>Média Geral</strong>
+              <p style={{ margin: '4px 0', fontSize: '1.5rem' }}>{selecionado?.estatisticas?.mediaNotas || 'N/A'}</p>
+              <small>Desempenho acadêmico</small>
+            </>
           )}
         </div>
       </div>
+
+      {!loadingUsuarios && !loadingLogs && dadosProcessados && (
+        <div style={{ marginBottom: '16px' }}>
+          <button
+            onClick={handleGerarRelatorio}
+            disabled={isGenerating}
+            className={`generateButton ${isGenerating ? 'disabled' : ''}`}
+          >
+            {isGenerating ? 'Gerando...' : 'Gerar Novo Relatório'}
+          </button>
+        </div>
+      )}
+
+      {!loadingUsuarios && !loadingLogs && dadosProcessados && (
+        <div className="layoutContainer">
+          <div className="sidebarclass">
+            <input
+              type="text"
+              placeholder="Buscar relatórios..."
+              value={busca}
+              onChange={e => setBusca(e.target.value)}
+              className="searchInput"
+            />
+            <ul className="reportsList">
+              {relsFiltrados.map(r => (
+                <li
+                  key={r.id}
+                  onClick={() => setSelecionado(r)}
+                  className={`reportItem ${selecionado?.id === r.id ? 'selected' : ''}`}
+                >
+                  <span className="reportIcon">{r.icone}</span>
+                  <div className="reportInfo">
+                    <div className="reportTitle">{r.titulo}</div>
+                    <small className="reportDate">{r.data}</small>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="detailArea" id="relatorio-detalhado">
+            {selecionado ? (
+              <>
+                <h3 style={{ marginTop: 0 }}>{selecionado.titulo}</h3>
+
+                {/* Botões de exportação */}
+                <div className="exportButtons">
+                  <button
+                    onClick={exportarExcel}
+                    className="excelButton"
+                  >
+                    Exportar Excel
+                  </button>
+                </div>
+
+                {/* Gráfico de distribuição */}
+                <GraficoDistribuicao data={selecionado.estatisticas} />
+
+                {/* Tabela de alunos */}
+                <table className="studentsTable">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Curso</th>
+                      <th>Nível de Risco</th>
+                      <th>Participação</th>
+                      <th>Média</th>
+                      <th>Progresso no moodle</th>
+                      <th>Último Acesso</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {selecionado.dados.map((aluno, i) => (
+                      <tr key={i} className="tableRow">
+                        <td className="tableCell">{aluno.nome}</td>
+                        <td className="tableCell">{aluno.curso}</td>
+                        <td className="tableCell">
+                          <span className={`riskBadge ${String(aluno.nivelRisco).includes('Alto') ? 'high' :
+                            String(aluno.nivelRisco).includes('Médio') ? 'medium' :
+                              String(aluno.nivelRisco).includes('Baixo') ? 'low' : 'unknown'
+                            }`}>
+                            {aluno.nivelRisco || 'Desconhecido'}
+                          </span>
+                        </td>
+                        <td className="tableCell">{aluno.participacao}%</td>
+                        <td className="tableCell">{aluno.media}</td>
+                        <td className="tableCell">{aluno.cobertura}%</td>
+                        <td className="tableCell">{aluno.ultimoAcesso ? new Date(aluno.ultimoAcesso).toLocaleDateString() : ''}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+            ) : (
+              <p>Selecione um relatório na lateral para visualizar os dados.</p>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

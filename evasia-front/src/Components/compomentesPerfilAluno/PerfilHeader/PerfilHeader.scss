@@ -1,23 +1,28 @@
-// Variáveis de cores
-$dark-bg: #1f212a;
-$dark-text: #d1d2de;
-$light-text: #ffffff;
-$accent-color: #4a90e2;
-$border-color: #2d2f3a;
+$primary-color: #1A237E;
+$secondary-color: #1976D2;
+$success-color: #388E3C;
+$warning-color: #FBC02D;
+$danger-color: #C62828;
+$background-color: #F5F6FA;
+$text-color: #23272F;
+$text-light: #6B7280;
+$border-color: #E0E3E7;
+$white: #fff;
+$accent-color: $secondary-color;
 
 .perfil-header {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   padding: 1.8rem 2rem;
-  background-color: $dark-bg;
+  background-color: $background-color;
   border-radius: 12px;
   border: 1px solid $border-color;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(26,35,126,0.08);
   transition: all 0.3s ease;
 
   &__avatar-container {
-    background: lighten($dark-bg, 5%);
+    background: lighten($background-color, 5%);
     padding: 6px;
     border-radius: 50%;
     border: 2px solid $accent-color;
@@ -28,7 +33,7 @@ $border-color: #2d2f3a;
     height: 72px;
     border-radius: 50%;
     object-fit: cover;
-    background-color: #fff;
+    background-color: $white;
   }
 
   &__info {
@@ -41,13 +46,13 @@ $border-color: #2d2f3a;
     margin: 0;
     font-size: 1.50rem;
     font-weight: 700;
-    color: $light-text;
+    color: $primary-color;
   }
 
   &__course {
     margin: 0;
     font-size: 1rem;
-    color: $dark-text;
+    color: $text-light;
     display: flex;
     align-items: center;
     gap: 0.4rem;

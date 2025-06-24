@@ -36,7 +36,7 @@ const ResumoStatus = ({ atividadesPendentes, userLastAccess, risco }) => {
           Frequência de Acesso:{' '}
           <strong>{getFrequenciaTexto(diasDesdeUltimoAcesso)}</strong>
         </li>
-        <li className={`status-${risco.replace(' risco', '').toLowerCase()}`}>
+        <li className={`status-${(risco || '').replace(' risco', '').toLowerCase()}`}>
           Status de Retenção:{' '}
           <strong>{interpretarRisco(risco)}</strong>
         </li>
